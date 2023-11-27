@@ -1,7 +1,8 @@
-package com.playdeadrespawn.trashtech
+package com.playdeadrespawn.trashtech.ui.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.playdeadrespawn.trashtech.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
