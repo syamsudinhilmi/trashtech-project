@@ -25,4 +25,15 @@
 		app:layout_constraintEnd_toEndOf="parent"
 		android:text="Button" />
 
+	<Button
+		android:id="@+id/button1"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginHorizontal="20dp"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		android:text="Halo Hilmi"
+		/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
