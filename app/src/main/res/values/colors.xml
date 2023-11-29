@@ -2,9 +2,8 @@
 <resources>
 	<color name="black">#FF000000</color>
 	<color name="white">#FFFFFFFF</color>
-	<color name="green">#73CAA0</color>
-	<color name="lightGreen">#F2FFF5</color>
 	<color name="primary">#73CAA0</color>
 	<color name="secondary">#F2FFF5</color>
 	<color name="dark">#363636</color>
+	<color name="destroy">#D46363</color>
 </resources>
