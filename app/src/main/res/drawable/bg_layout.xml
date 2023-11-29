@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- rounded_green_background.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@color/secondary" />
+
+    <item
+        android:top="-600dp"
+        android:left="-10dp"
+        android:right="-10dp"
+        android:bottom="400dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/primary" />
+            <corners android:radius="35dp" /> <!-- Jari-jari sudut -->
+        </shape>
+    </item>
+
+</layer-list>
