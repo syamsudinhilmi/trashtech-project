@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.playdeadrespawn.trashtech.R
 import com.playdeadrespawn.trashtech.databinding.ActivityMainBinding
+import com.playdeadrespawn.trashtech.ui.BottomNavigationUtils
+import com.playdeadrespawn.trashtech.ui.BottomNavigationUtils.handleBottomNavigation
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -20,5 +22,13 @@ class MainActivity : AppCompatActivity() {
         binding.btnGalery.setOnClickListener{
             startActivity(Intent(this, MapsActivity::class.java))
         }
+
+        val bottomNavView = binding.bottomNavView
+        bottomNavView.selectedItemId = R.id.home
+        bottomNavView.setOnItemSelectedListener  { item ->
+            BottomNavigationUtils.handleBottomNavigation(this, item.itemId)
+            true
+        }
+
     }
 }
