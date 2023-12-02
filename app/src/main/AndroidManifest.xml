@@ -16,9 +16,7 @@
 		android:supportsRtl="true"
 		android:theme="@style/Theme.TrashTech"
 		tools:targetApi="31">
-		<activity
-			android:name=".ui.activity.CameraActivity"
-			android:exported="false" />
+
 		<activity
 			android:name=".ui.activity.ResultActivity"
 			android:exported="false" />
