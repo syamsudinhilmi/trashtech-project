@@ -11,7 +11,7 @@
 		android:layout_width="match_parent"
 		android:layout_height="350dp"
 		android:scaleType="centerCrop"
-		android:src="@drawable/default_image"
+		android:src="@drawable/ic_holder"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
 		android:contentDescription="@string/img_desc"
@@ -27,7 +27,7 @@
 		android:textStyle="bold"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toBottomOf="@id/img_prev"
-		tools:text="Plastik" />
+		android:text="Plastik" />
 
 	<TextView
 		android:id="@+id/tv_rec"
@@ -39,7 +39,7 @@
 		android:textStyle="bold"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toBottomOf="@+id/tv_result"
-		tools:text="Rekomendasi" />
+		android:text="Rekomendasi" />
 
 	<TextView
 		android:id="@+id/textView"
@@ -50,7 +50,7 @@
 		android:textSize="12sp"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintTop_toBottomOf="@id/img_prev"
-		tools:text="Dikategorikan Sebagai:" />
+		android:text="Dikategorikan Sebagai:" />
 
 	<TextView
 		android:id="@+id/tv_category"
@@ -61,7 +61,7 @@
 		android:textSize="24sp"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintTop_toBottomOf="@id/textView"
-		tools:text="Anorganik" />
+		android:text="Anorganik" />
 
 	<androidx.recyclerview.widget.RecyclerView
 		android:id="@+id/rv_rec"
@@ -72,6 +72,5 @@
 		android:layout_marginEnd="24dp"
 		tools:listitem="@layout/item_rec"
 		app:layout_constraintTop_toBottomOf="@id/tv_rec"/>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

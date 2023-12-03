@@ -12,6 +12,6 @@
 		android:maxLines="1"
 		android:padding="8dp"
 		android:textSize="16sp"
-		tools:text="Rekomendasi penyelesaian" />
+		android:text="Rekomendasi penyelesaian" />
 
 </androidx.cardview.widget.CardView>
