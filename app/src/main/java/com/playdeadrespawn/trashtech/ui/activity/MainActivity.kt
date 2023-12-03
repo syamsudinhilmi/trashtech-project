@@ -2,16 +2,22 @@ package com.playdeadrespawn.trashtech.ui.activity
 
 import android.content.Intent
 import android.graphics.drawable.ColorDrawable
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.Toast
+import androidx.activity.result.PickVisualMediaRequest
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
 import com.playdeadrespawn.trashtech.R
 import com.playdeadrespawn.trashtech.databinding.ActivityMainBinding
+import com.playdeadrespawn.trashtech.getImageUri
 import com.playdeadrespawn.trashtech.ui.BottomNavigationUtils
+
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
+    private var currentImageUri: Uri? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -21,19 +27,55 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.setBackgroundDrawable(ColorDrawable(ContextCompat.getColor(this, R.color.primary)))
 
         binding.btnCamera.setOnClickListener{
-            startActivity(Intent(this, SignUpActivity::class.java))
+            startCamera()
         }
-
         binding.btnGalery.setOnClickListener{
-            startActivity(Intent(this, MapsActivity::class.java))
+            startGallery()
         }
-
         binding.btnKlasifikasi.setOnClickListener{
-            startActivity(Intent(this, ResultActivity::class.java))
+            val intent = Intent(this, ResultActivity::class.java)
+            startActivity(intent)
         }
     }
 
+    private fun startGallery() {
+        launcherGallery.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
+    }
+
+    private fun startCamera() {
+        currentImageUri = getImageUri(this)
+        launcherIntentCamera.launch(currentImageUri)
+    }
+
+    private val launcherIntentCamera = registerForActivityResult(
+        ActivityResultContracts.TakePicture()
+    ) { isSuccess ->
+        if (isSuccess) {
+            showImage()
+        }
+    }
+
+    private val launcherGallery = registerForActivityResult(
+        ActivityResultContracts.PickVisualMedia()
+    ) { uri: Uri? ->
+        if (uri != null) {
+            currentImageUri = uri
+            showImage()
+        } else {
+            Log.d("Photo Picker", "No media selected")
+        }
+    }
+
+    private fun showImage() {
+        currentImageUri?.let {
+            Log.d("Image URI", "showImage: $it")
+            binding.imgPrev.setImageURI(it)
+        }
+    }
+
+
     override fun onStart() {
+
         val bottomNavView = binding.bottomNavView
         bottomNavView.selectedItemId = R.id.home
         bottomNavView.itemActiveIndicatorColor = getColorStateList(R.color.dark_primary)
