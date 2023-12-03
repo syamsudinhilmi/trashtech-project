@@ -20,5 +20,7 @@ class SigninActivity : AppCompatActivity() {
         binding.signin.setOnClickListener(){
             startActivity(Intent(this, SignUpActivity::class.java))
         }
+
+        supportActionBar?.hide()
     }
 }
