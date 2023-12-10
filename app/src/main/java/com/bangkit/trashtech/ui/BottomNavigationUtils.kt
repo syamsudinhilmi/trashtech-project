@@ -1,11 +1,11 @@
-package com.playdeadrespawn.trashtech.ui
+package com.bangkit.trashtech.ui
 
 import android.content.Context
 import android.content.Intent
-import com.playdeadrespawn.trashtech.R
-import com.playdeadrespawn.trashtech.ui.activity.MainActivity
-import com.playdeadrespawn.trashtech.ui.activity.MapsActivity
-import com.playdeadrespawn.trashtech.ui.activity.ProfileActivity
+import com.bangkit.trashtech.R
+import com.bangkit.trashtech.ui.activity.MainActivity
+import com.bangkit.trashtech.ui.activity.MapsActivity
+import com.bangkit.trashtech.ui.activity.ProfileActivity
 
 object BottomNavigationUtils {
     fun handleBottomNavigation(context: Context, menuItemId: Int) {

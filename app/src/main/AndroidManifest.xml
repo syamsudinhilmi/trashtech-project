@@ -38,7 +38,7 @@
         -->
 		<meta-data
 			android:name="com.google.android.geo.API_KEY"
-			android:value="" />
+			android:value="AIzaSyC-7YyAgFLS_dNivvNwl-lraJgzsu19nSc" />
 
 		<activity
 			android:name=".ui.activity.MapsActivity"
@@ -62,7 +62,7 @@
 
 		<provider
 			android:name="androidx.core.content.FileProvider"
-			android:authorities="com.playdeadrespawn.trashtech.fileprovider"
+			android:authorities="com.bangkit.trashtech.fileprovider"
 			android:exported="false"
 			android:grantUriPermissions="true">
 			<meta-data

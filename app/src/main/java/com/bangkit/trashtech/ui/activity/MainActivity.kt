@@ -1,4 +1,4 @@
-package com.playdeadrespawn.trashtech.ui.activity
+package com.bangkit.trashtech.ui.activity
 
 import android.content.Intent
 import android.graphics.drawable.ColorDrawable
@@ -9,10 +9,10 @@ import android.util.Log
 import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
-import com.playdeadrespawn.trashtech.R
-import com.playdeadrespawn.trashtech.databinding.ActivityMainBinding
-import com.playdeadrespawn.trashtech.getImageUri
-import com.playdeadrespawn.trashtech.ui.BottomNavigationUtils
+import com.bangkit.trashtech.R
+import com.bangkit.trashtech.databinding.ActivityMainBinding
+import com.bangkit.trashtech.getImageUri
+import com.bangkit.trashtech.ui.BottomNavigationUtils
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding

@@ -81,7 +81,7 @@
                 app:layout_constraintTop_toBottomOf="@id/tv_email"
                 app:startIconDrawable="@drawable/baseline_mail_24">
 
-                <com.playdeadrespawn.trashtech.ui.customview.EmailEditText
+                <com.bangkit.trashtech.ui.customview.EmailEditText
                     android:id="@+id/ed_register_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -110,7 +110,7 @@
                 app:layout_constraintTop_toBottomOf="@id/tv_pass"
                 app:startIconDrawable="@drawable/ic_lock">
 
-                <com.playdeadrespawn.trashtech.ui.customview.PasswordEditText
+                <com.bangkit.trashtech.ui.customview.PasswordEditText
                     android:id="@+id/ed_register_pass"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

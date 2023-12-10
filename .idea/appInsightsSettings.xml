@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.bangkit.trashtech" />
+                  <option name="mobileSdkAppId" value="1:709553457620:android:e2deec6ef6ee0694a52e41" />
+                  <option name="projectId" value="trashtech-capstone" />
+                  <option name="projectNumber" value="709553457620" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

@@ -1,4 +1,4 @@
-package com.playdeadrespawn.trashtech.ui.activity
+package com.bangkit.trashtech.ui.activity
 
 import android.content.Intent
 import android.graphics.drawable.ColorDrawable
@@ -13,9 +13,8 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
-import com.playdeadrespawn.trashtech.R
-import com.playdeadrespawn.trashtech.databinding.ActivityMapsBinding
-import com.playdeadrespawn.trashtech.ui.BottomNavigationUtils
+import com.bangkit.trashtech.R
+import com.bangkit.trashtech.databinding.ActivityMapsBinding
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 

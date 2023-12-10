@@ -1,4 +1,4 @@
-package com.playdeadrespawn.trashtech
+package com.bangkit.trashtech
 
 import org.junit.Test
 

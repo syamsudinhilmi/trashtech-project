@@ -1,4 +1,4 @@
-package com.playdeadrespawn.trashtech
+package com.bangkit.trashtech
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

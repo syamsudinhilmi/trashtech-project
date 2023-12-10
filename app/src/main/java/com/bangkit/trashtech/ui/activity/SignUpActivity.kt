@@ -1,10 +1,9 @@
-package com.playdeadrespawn.trashtech.ui.activity
+package com.bangkit.trashtech.ui.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.playdeadrespawn.trashtech.R
-import com.playdeadrespawn.trashtech.databinding.ActivitySignUpBinding
+import com.bangkit.trashtech.databinding.ActivitySignUpBinding
 
 class SignUpActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySignUpBinding

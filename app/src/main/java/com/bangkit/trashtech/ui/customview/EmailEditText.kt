@@ -1,17 +1,16 @@
-package com.playdeadrespawn.trashtech.ui.customview
+package com.bangkit.trashtech.ui.customview
 
 import android.content.Context
 import android.graphics.Canvas
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.AttributeSet
+import android.util.Patterns
 import android.view.View
 import androidx.appcompat.widget.AppCompatEditText
-import com.playdeadrespawn.trashtech.R
+import com.bangkit.trashtech.R
 
-@Suppress("UNUSED_EXPRESSION")
-class PasswordEditText : AppCompatEditText {
-
+class EmailEditText : AppCompatEditText {
     constructor(context: Context) : super(context) {
         init()
     }
@@ -35,21 +34,23 @@ class PasswordEditText : AppCompatEditText {
 
     private fun init() {
         addTextChangedListener(object : TextWatcher {
-            override fun beforeTextChanged(s: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                null
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                error = null
             }
 
             override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
-                if (s.toString().length < 8) {
-                    setError(context.getString(R.string.password_alert), null)
-                } else {
-                    error = null
-                }
+                error = null
             }
 
             override fun afterTextChanged(p0: Editable?) {
-                null
+                if (!isValidEmail(p0.toString())) {
+                    setError(context.getString(R.string.email_alert), null)
+                }
             }
         })
+    }
+
+    fun isValidEmail(email: String): Boolean {
+        return Patterns.EMAIL_ADDRESS.matcher(email).matches()
     }
 }

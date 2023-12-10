@@ -1,16 +1,12 @@
-package com.playdeadrespawn.trashtech.ui.activity
+package com.bangkit.trashtech.ui.activity
 
 import android.content.Intent
-import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.MenuItem
-import android.widget.Toast
-import androidx.core.content.ContextCompat
-import com.playdeadrespawn.trashtech.R
-import com.playdeadrespawn.trashtech.databinding.ActivityProfileBinding
-import com.playdeadrespawn.trashtech.ui.BottomNavigationUtils
+import com.bangkit.trashtech.R
+import com.bangkit.trashtech.databinding.ActivityProfileBinding
+import com.bangkit.trashtech.ui.BottomNavigationUtils
 
 class ProfileActivity : AppCompatActivity() {
     private lateinit var binding: ActivityProfileBinding

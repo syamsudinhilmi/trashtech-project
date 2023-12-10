@@ -1,8 +1,8 @@
-package com.playdeadrespawn.trashtech.ui.activity
+package com.bangkit.trashtech.ui.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.playdeadrespawn.trashtech.R
+import com.bangkit.trashtech.R
 
 class ResultActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
