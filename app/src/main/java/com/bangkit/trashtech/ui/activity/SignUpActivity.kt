@@ -50,7 +50,7 @@ class SignUpActivity : AppCompatActivity() {
                             } else {
                                 // If sign in fails, display a message to the user.
                                 Toast.makeText(this, "Gagal menambahkan", Toast.LENGTH_SHORT).show()
-
+                                Toast.makeText(this, task.exception?.message.toString(), Toast.LENGTH_SHORT).show()
                             }
                         }
                 } else{
