@@ -14,21 +14,26 @@ import androidx.appcompat.app.AlertDialog
 import com.bangkit.trashtech.R
 import com.bangkit.trashtech.databinding.ActivityProfileBinding
 import com.bangkit.trashtech.ui.BottomNavigationUtils
+import com.google.firebase.Firebase
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.auth
 
 class ProfileActivity : AppCompatActivity() {
     private lateinit var binding: ActivityProfileBinding
+    private lateinit var auth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         supportActionBar?.hide()
-//        setSupportActionBar(binding.materialToolBarProfile)
-//        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        
-//        binding.actionLogout.setOnClickListener{
-//            startActivity(Intent(this, SigninActivity::class.java))
-//        }
+        auth = Firebase.auth
+        val user = auth.currentUser
+
+        if (user != null) {
+            binding.tvRealEmail.text = user.email
+        }
 
         binding.menuDropdown.setOnClickListener { showDropdownMenu(it)  }
 
@@ -76,7 +81,7 @@ class ProfileActivity : AppCompatActivity() {
         builder.setMessage("Apakah anda yakin ingin mengeluarkan akun?")
 
         builder.setPositiveButton("Yes") { dialog: DialogInterface, _: Int ->
-            startActivity(Intent(this, SigninActivity::class.java))
+            logout()
             dialog.dismiss()
         }
 
@@ -85,5 +90,13 @@ class ProfileActivity : AppCompatActivity() {
         }
 
         builder.show()
+    }
+
+    private fun logout(){
+        auth.signOut()
+        val intent = Intent(this, SigninActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+        startActivity(intent)
+        Toast.makeText(this, "Berhasil keluar", Toast.LENGTH_SHORT).show()
     }
 }

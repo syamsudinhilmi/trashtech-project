@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/secondary"
     tools:context=".ui.activity.SignUpActivity">
 
@@ -15,42 +15,33 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="320dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:background="@drawable/bg_signup"
-            android:padding="16dp"
-            android:layout_gravity="center">
+            android:padding="16dp">
 
             <TextView
                 android:id="@+id/sign_up"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/sign_up"
-                android:textSize="35sp"
+                android:text="@string/regist_txt"
                 android:textAlignment="center"
-                android:textStyle="bold"
                 android:textColor="@color/dark"
-                app:layout_constraintTop_toTopOf="parent"
+                android:textSize="35sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                />
-
-            <TextView
-                android:id="@+id/tv_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                android:text="@string/tv_nama"
-                app:layout_constraintBottom_toTopOf="@id/nameEditTextLayout"
-                app:layout_constraintStart_toStartOf="@id/nameEditTextLayout"
-                app:layout_constraintTop_toBottomOf="@id/sign_up" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/nameEditTextLayout"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:hint="@string/hint_username_txt"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_name"
+                app:layout_constraintTop_toBottomOf="@id/sign_up"
                 app:startIconDrawable="@drawable/baseline_account_circle_24">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -62,23 +53,16 @@
                     tools:ignore="SpeakableTextPresentCheck" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <TextView
-                android:id="@+id/tv_email"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="@string/tv_email"
-                app:layout_constraintStart_toStartOf="@id/emailEditTextLayout"
-                app:layout_constraintTop_toBottomOf="@id/nameEditTextLayout" />
-
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/emailEditTextLayout"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="@string/hint_ed_email"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_email"
+                app:layout_constraintTop_toBottomOf="@id/nameEditTextLayout"
                 app:startIconDrawable="@drawable/baseline_mail_24">
 
                 <com.bangkit.trashtech.ui.customview.EmailEditText
@@ -90,24 +74,17 @@
                     tools:ignore="SpeakableTextPresentCheck" />
             </com.google.android.material.textfield.TextInputLayout>
 
-
-            <TextView
-                android:id="@+id/tv_pass"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="@string/tv_password"
-                app:layout_constraintStart_toStartOf="@id/passEditTextLayout"
-                app:layout_constraintTop_toBottomOf="@id/emailEditTextLayout" />
-
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/passEditTextLayout"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="@string/hint_ed_password"
+                app:endIconMode="password_toggle"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_pass"
+                app:layout_constraintTop_toBottomOf="@id/emailEditTextLayout"
                 app:startIconDrawable="@drawable/ic_lock">
 
                 <com.bangkit.trashtech.ui.customview.PasswordEditText
@@ -115,7 +92,29 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:inputType="textEmailAddress"
+                    android:inputType="textPassword"
+                    tools:ignore="SpeakableTextPresentCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/confPassEditTextLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="@string/hint_ed_conf_password"
+                app:endIconMode="password_toggle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/passEditTextLayout"
+                app:startIconDrawable="@drawable/ic_lock">
+
+                <com.bangkit.trashtech.ui.customview.PasswordEditText
+                    android:id="@+id/ed_conf_register_pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPassword"
                     tools:ignore="SpeakableTextPresentCheck" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -123,14 +122,22 @@
                 android:id="@+id/btn_sign_up"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/passEditTextLayout"
-                android:layout_marginTop="15dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:text="Sign Up"
+                android:layout_marginTop="30dp"
                 android:backgroundTint="@color/primary"
-                />
+                android:text="@string/regist_txt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/confPassEditTextLayout" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="66dp"
+            android:visibility="gone"
+            />
     </FrameLayout>
 </LinearLayout>

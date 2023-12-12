@@ -3,10 +3,9 @@
     <string name="email_alert">email tidak valid</string>
     <string name="img_desc">default image</string>
     <string name="password_alert">password kurang dari 8 karakter</string>
-    <string name="tv_nama">Nama</string>
+    <string name="tv_name">Nama</string>
     <string name="tv_email">Email</string>
     <string name="tv_password">Password</string>
-    <string name="sign_up">Sign Up</string>
     <string name="title_activity_maps">MapsActivity</string>
     <string name="normal_type">Normal</string>
     <string name="satellite_type">Satellite</string>
@@ -14,4 +13,11 @@
     <string name="hybrid_type">Hybrid</string>
     <string name="abstract_desc">Aplikasi pengelolaan limbah menggunakan teknologi pengenalan gambar dan pembelajaran mesin untuk mengklasifikasikan jenis limbah dari gambar pengguna. Aplikasi juga memberikan rekomendasi pengelolaan limbah, termasuk informasi lokasi tempat penampungan sementara (TPS) terdekat. Tujuan aplikasi ini adalah meningkatkan kesadaran masyarakat tentang pengelolaan limbah yang benar dan mendukung praktik berkelanjutan.</string>
     <string name="abstract_title">Abstrak</string>
+    <string name="login_txt">Masuk</string>
+    <string name="hint_ed_email">Masukkan Email</string>
+    <string name="hint_ed_password">Masukkan Password</string>
+    <string name="hint_ed_conf_password">Konfirmasi Password</string>
+    <string name="havent_account_txt">Belum punya akun?</string>
+    <string name="regist_txt">Registrasi</string>
+    <string name="hint_username_txt">Nama Pengguna</string>
 </resources>

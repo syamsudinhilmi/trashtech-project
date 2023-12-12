@@ -83,7 +83,6 @@ class MainActivity : AppCompatActivity() {
             BottomNavigationUtils.handleBottomNavigation(this, item.itemId)
             true
         }
-        Log.d("start", "onstart")
         super.onStart()
     }
 }
