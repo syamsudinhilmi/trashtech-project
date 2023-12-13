@@ -75,7 +75,6 @@ class MainActivity : AppCompatActivity() {
 
 
     override fun onStart() {
-
         val bottomNavView = binding.bottomNavView
         bottomNavView.selectedItemId = R.id.home
         bottomNavView.itemActiveIndicatorColor = getColorStateList(R.color.dark_primary)
