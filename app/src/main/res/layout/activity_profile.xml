@@ -35,16 +35,6 @@
 			android:textColor="@color/white"
 			android:layout_marginLeft="18dp"/>
 
-<!--		&lt;!&ndash; Tombol Logout &ndash;&gt;-->
-<!--		<androidx.appcompat.widget.AppCompatImageButton-->
-<!--			android:id="@+id/action_logout"-->
-<!--			android:layout_width="50dp"-->
-<!--			android:layout_height="50dp"-->
-<!--			android:layout_gravity="end"-->
-<!--			android:layout_marginEnd="6dp"-->
-<!--			android:background="@drawable/square_button_solid"-->
-<!--			android:src="@drawable/baseline_logout_24" />-->
-
 		<!-- Menu Dropdown -->
 		<ImageView
 			android:id="@+id/menu_dropdown"
@@ -102,6 +92,30 @@
 		android:textSize="18sp"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toBottomOf="@+id/tv_email" />
+
+
+	<TextView
+		android:id="@+id/tv_password"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="23dp"
+		android:text="Password"
+		android:layout_marginStart="32dp"
+		android:textSize="18sp"
+		android:textStyle="bold"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/tv_real_email" />
+
+	<TextView
+		android:id="@+id/tv_real_password"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="5dp"
+		tools:text="123123123"
+		android:layout_marginStart="32dp"
+		android:textSize="18sp"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/tv_password" />
 
 	<com.google.android.material.bottomnavigation.BottomNavigationView
 		android:id="@+id/bottomNavView"

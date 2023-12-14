@@ -17,6 +17,7 @@ import com.bangkit.trashtech.ui.BottomNavigationUtils
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.auth
+import com.google.firebase.firestore.firestore
 
 class ProfileActivity : AppCompatActivity() {
     private lateinit var binding: ActivityProfileBinding
@@ -30,10 +31,27 @@ class ProfileActivity : AppCompatActivity() {
         supportActionBar?.hide()
         auth = Firebase.auth
         val user = auth.currentUser
+        val db = Firebase.firestore
 
         if (user != null) {
-            binding.tvRealEmail.text = user.email
+            val docRef = db.collection("users").document(user.uid)
+            docRef.get()
+                .addOnSuccessListener { document ->
+                    if (document != null) {
+                        Log.d(TAG, "DocumentSnapshot data: ${document.data}")
+                        binding.tvUsername.text = document.get("username").toString()
+                        binding.tvRealEmail.text = document.get("email").toString()
+                        binding.tvRealPassword.text = document.get("password").toString()
+                    } else {
+                        Log.d(TAG, "No such document")
+                    }
+                }
+                .addOnFailureListener { exception ->
+                    Log.d(TAG, "get failed with ", exception)
+                }
+
         }
+
 
         binding.menuDropdown.setOnClickListener { showDropdownMenu(it)  }
 
@@ -98,5 +116,9 @@ class ProfileActivity : AppCompatActivity() {
         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
         startActivity(intent)
         Toast.makeText(this, "Berhasil keluar", Toast.LENGTH_SHORT).show()
+    }
+
+    companion object{
+        private val TAG = ProfileActivity::class.java.simpleName
     }
 }
