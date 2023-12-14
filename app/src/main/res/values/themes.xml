@@ -5,6 +5,7 @@
 		<item name="colorPrimary">@color/primary</item>
 		<item name="titleTextColor">@color/white</item>
 		<item name="colorControlNormal">@color/white</item>
+		<item name="fontFamily">@font/nunito_regular</item>
 	</style>
 
 	<style name="Theme.TrashTech" parent="Base.Theme.TrashTech" />

@@ -15,6 +15,12 @@ import java.util.Locale
 private const val FILENAME_FORMAT = "yyyyMMdd_HHmmss"
 private val timeStamp: String = SimpleDateFormat(FILENAME_FORMAT, Locale.US).format(Date())
 
+class Constants{
+    companion object{
+        const val BASE_URL = "https://newsapi.org"
+    }
+}
+
 fun getImageUri(context: Context): Uri {
     var uri: Uri? = null
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {

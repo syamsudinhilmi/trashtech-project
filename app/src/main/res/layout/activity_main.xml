@@ -4,75 +4,214 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/primary"
     tools:context=".ui.activity.MainActivity">
 
     <ImageView
-        android:id="@+id/img_prev"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_marginTop="50dp"
-        android:contentDescription="@string/img_desc"
-        android:scaleType="centerCrop"
-        android:src="@drawable/ic_holder"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.3"
+        android:background="@drawable/bg_photo" />
 
-    <Button
-        android:id="@+id/btn_camera"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:backgroundTint="@color/primary"
-        android:padding="12dp"
-        android:paddingHorizontal="60dp"
-        android:text="Kamera"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@id/btn_galery"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/img_prev" />
-
-    <Button
-        android:id="@+id/btn_galery"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:backgroundTint="@color/primary"
-        android:padding="12dp"
-        android:paddingHorizontal="60dp"
-        android:text="Galeri"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/btn_camera"
-        app:layout_constraintTop_toBottomOf="@id/img_prev" />
-
-
-    <Button
-        android:id="@+id/btn_klasifikasi"
+    <TextView
+        android:id="@+id/hello"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="30dp"
-        android:layout_marginBottom="20dp"
-        android:backgroundTint="@color/primary"
-        android:padding="10dp"
-        android:paddingVertical="5dp"
-        android:text="Identifikasi"
-        android:textSize="20sp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="Siap menyelesaikan sampah anda?"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="32dp"
+        tools:text="lumbajawa@gmail.com"
+        android:textColor="@color/dark"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/hello" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tvUser">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_Identifikasi"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/white"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            app:cornerRadius="24dp"
+            app:icon="@drawable/ic_identification"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconSize="32dp"
+            app:iconTint="@color/dark"
+            app:layout_constraintBottom_toTopOf="@+id/tv_identifikasi"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_identifikasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Identifikasi"
+            android:textStyle="bold"
+            android:textColor="@color/dark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/btn_Identifikasi"
+            app:layout_constraintStart_toStartOf="@+id/btn_Identifikasi"
+            app:layout_constraintTop_toBottomOf="@+id/btn_Identifikasi" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_save"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/white"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            app:cornerRadius="24dp"
+            app:icon="@drawable/ic_bookmark"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconSize="32dp"
+            app:iconTint="@color/dark"
+            app:layout_constraintBottom_toTopOf="@+id/tv_save"
+            app:layout_constraintEnd_toStartOf="@+id/btn_more"
+            app:layout_constraintStart_toEndOf="@+id/btn_Identifikasi"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tersimpan"
+            android:textStyle="bold"
+            android:textColor="@color/dark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/btn_save"
+            app:layout_constraintStart_toStartOf="@+id/btn_save"
+            app:layout_constraintTop_toBottomOf="@+id/btn_save" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_more"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:backgroundTint="@color/white"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="16dp"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            app:cornerRadius="24dp"
+            app:icon="@drawable/ic_history"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconSize="32dp"
+            app:iconTint="@color/dark"
+            app:layout_constraintBottom_toTopOf="@+id/tv_history"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Riwayat"
+            android:textStyle="bold"
+            android:textColor="@color/dark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/btn_more"
+            app:layout_constraintStart_toStartOf="@+id/btn_more"
+            app:layout_constraintTop_toBottomOf="@+id/btn_more" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="300dp"
+        android:layout_marginBottom="81dp"
+        android:background="@drawable/bg_layout"
         app:layout_constraintBottom_toTopOf="@id/bottomNavView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/menu">
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_news"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="32dp"
+            android:text="Berita Untuk Anda"
+            android:textColor="@color/dark"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/rv_news"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_news"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_news" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavView"
         android:layout_width="match_parent"
-        android:background="@color/primary"
-        app:itemTextColor="@color/white"
-        app:itemIconTint="@color/white"
         android:layout_height="wrap_content"
+        android:background="@color/primary"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_nav_menu"/>
+        app:menu="@menu/bottom_nav_menu" />
+
+    >
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

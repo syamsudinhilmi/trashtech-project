@@ -61,7 +61,7 @@ class SigninActivity : AppCompatActivity() {
             }
         }
 
-        binding.signin.setOnClickListener(){
+        binding.signup.setOnClickListener(){
             startActivity(Intent(this, SignUpActivity::class.java))
         }
 

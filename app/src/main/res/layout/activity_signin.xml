@@ -9,6 +9,12 @@
 
     <ImageView
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_photo"
+        android:alpha="0.3"/>
+
+    <ImageView
+        android:layout_width="match_parent"
         android:layout_height="200dp"
         android:src="@drawable/icon"
         android:padding="48dp"
@@ -41,7 +47,7 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="24dp"
                 android:hint="@string/hint_ed_email"
                 android:textColorHint="@color/dark"
                 app:boxCornerRadiusBottomEnd="64dp"
@@ -55,7 +61,7 @@
                 <com.bangkit.trashtech.ui.customview.EmailEditText
                     android:id="@+id/ed_register_email"
                     android:layout_width="match_parent"
-                    android:layout_height="64dp"
+                    android:layout_height="56dp"
                     android:ems="10"
                     android:inputType="textEmailAddress"
                     tools:ignore="SpeakableTextPresentCheck" />
@@ -65,7 +71,7 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="24dp"
                 android:hint="@string/hint_ed_password"
                 android:textColorHint="@color/dark"
                 app:boxCornerRadiusBottomEnd="64dp"
@@ -80,52 +86,49 @@
                 <com.bangkit.trashtech.ui.customview.PasswordEditText
                     android:id="@+id/ed_register_pass"
                     android:layout_width="match_parent"
-                    android:layout_height="64dp"
+                    android:layout_height="56dp"
                     android:ems="10"
                     android:inputType="textPassword"
                     tools:ignore="SpeakableTextPresentCheck" />
             </com.google.android.material.textfield.TextInputLayout>
 
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_signin"
                 android:layout_width="match_parent"
-                android:layout_height="64dp"
+                android:layout_height="56dp"
                 android:layout_marginTop="56dp"
                 android:backgroundTint="@color/primary"
                 android:text="@string/login_txt"
                 android:textColor="@color/white"
-                app:layout_constraintTop_toBottomOf="@id/passEditTextLayout"
-                tools:layout_editor_absoluteX="16dp" />
+                app:layout_constraintTop_toBottomOf="@id/passEditTextLayout" />
 
-            <TextView
-                android:id="@+id/singin_tv"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="96dp"
-                android:gravity="center_vertical"
-                android:text="@string/havent_account_txt"
-                android:textColor="@color/dark"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toStartOf="@id/signin"
-                app:layout_constraintStart_toStartOf="@+id/btn_signin"
-                app:layout_constraintTop_toBottomOf="@+id/btn_signin" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:gravity="center_horizontal">
 
-            <TextView
-                android:id="@+id/signin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:layout_marginStart="12dp"
-                android:text="@string/regist_txt"
-                android:textColor="@color/primary"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/singin_tv"
-                app:layout_constraintEnd_toEndOf="@+id/btn_signin"
-                app:layout_constraintStart_toEndOf="@+id/singin_tv"
-                app:layout_constraintTop_toTopOf="@+id/singin_tv" />
+                <TextView
+                    android:id="@+id/singin_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/havent_account_txt"
+                    android:textColor="@color/dark"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="12dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/signup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/regist_txt"
+                    android:textColor="@color/primary"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </FrameLayout>

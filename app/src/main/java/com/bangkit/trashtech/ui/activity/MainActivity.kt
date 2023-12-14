@@ -1,78 +1,68 @@
 package com.bangkit.trashtech.ui.activity
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.graphics.drawable.ColorDrawable
-import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import androidx.activity.result.PickVisualMediaRequest
-import androidx.activity.result.contract.ActivityResultContracts
+import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.bangkit.trashtech.R
+import com.bangkit.trashtech.adapter.NewsAdapter
 import com.bangkit.trashtech.databinding.ActivityMainBinding
-import com.bangkit.trashtech.getImageUri
 import com.bangkit.trashtech.ui.BottomNavigationUtils
+import com.bangkit.trashtech.ui.viewmodel.NewsViewModel
+import com.google.firebase.Firebase
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.auth
+import com.google.firebase.firestore.firestore
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    private var currentImageUri: Uri? = null
+    private lateinit var viewModel: NewsViewModel
+    private lateinit var adapter: NewsAdapter
+    private lateinit var auth: FirebaseAuth
 
+    @SuppressLint("NotifyDataSetChanged")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         supportActionBar?.hide()
         supportActionBar?.setBackgroundDrawable(ColorDrawable(ContextCompat.getColor(this, R.color.primary)))
 
-        binding.btnCamera.setOnClickListener{
-            startCamera()
+        adapter = NewsAdapter()
+        adapter.notifyDataSetChanged()
+        viewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory())[NewsViewModel::class.java]
+        getUsername()
+
+        binding.apply {
+            rvNews.layoutManager = LinearLayoutManager(this@MainActivity)
+            rvNews.setHasFixedSize(true)
+            rvNews.adapter = adapter
+            viewModel.setNews("sampah", "4cc5bb3ac6fe4898ac97bddf67335362")
+
+            showLoading(true)
+            viewModel.listNews.observe(this@MainActivity) { articles ->
+                if (articles != null) {
+                    showLoading(false)
+                    adapter.setList(articles)
+                }
+            }
+
+            btnIdentifikasi.setOnClickListener {
+                val intent = Intent(this@MainActivity, IdentificationActivity::class.java)
+                startActivity(intent)
+            }
         }
-        binding.btnGalery.setOnClickListener{
-            startGallery()
-        }
-        binding.btnKlasifikasi.setOnClickListener{
-            val intent = Intent(this, ResultActivity::class.java)
-            startActivity(intent)
-        }
+
     }
 
-    private fun startGallery() {
-        launcherGallery.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
+    private fun showLoading(state: Boolean) {
+        binding.progressBar.visibility = if (state) View.VISIBLE else View.GONE
     }
-
-    private fun startCamera() {
-        currentImageUri = getImageUri(this)
-        launcherIntentCamera.launch(currentImageUri)
-    }
-
-    private val launcherIntentCamera = registerForActivityResult(
-        ActivityResultContracts.TakePicture()
-    ) { isSuccess ->
-        if (isSuccess) {
-            showImage()
-        }
-    }
-
-    private val launcherGallery = registerForActivityResult(
-        ActivityResultContracts.PickVisualMedia()
-    ) { uri: Uri? ->
-        if (uri != null) {
-            currentImageUri = uri
-            showImage()
-        } else {
-            Log.d("Photo Picker", "No media selected")
-        }
-    }
-
-    private fun showImage() {
-        currentImageUri?.let {
-            Log.d("Image URI", "showImage: $it")
-            binding.imgPrev.setImageURI(it)
-        }
-    }
-
 
     override fun onStart() {
         val bottomNavView = binding.bottomNavView
@@ -83,5 +73,22 @@ class MainActivity : AppCompatActivity() {
             true
         }
         super.onStart()
+    }
+
+    private fun getUsername(){
+        auth = Firebase.auth
+        val user = auth.currentUser
+        val db = Firebase.firestore
+
+        if (user != null) {
+            val docRef = db.collection("users").document(user.uid)
+            docRef.get()
+                .addOnSuccessListener { document ->
+                    if (document != null) {
+                        binding.tvUser.text = document.get("username").toString()
+                    }
+                }
+
+        }
     }
 }

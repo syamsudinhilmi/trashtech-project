@@ -12,14 +12,15 @@
     <string name="satellite_type">Satellite</string>
     <string name="terrain_type">Terrain</string>
     <string name="hybrid_type">Hybrid</string>
-    <string name="abstract_desc">Aplikasi pengelolaan limbah menggunakan teknologi pengenalan gambar dan pembelajaran mesin untuk mengklasifikasikan jenis limbah dari gambar pengguna. Aplikasi juga memberikan rekomendasi pengelolaan limbah, termasuk informasi lokasi tempat penampungan sementara (TPS) terdekat. Tujuan aplikasi ini adalah meningkatkan kesadaran masyarakat tentang pengelolaan limbah yang benar dan mendukung praktik berkelanjutan.</string>
+    <string name="abstract_desc">Aplikasi pengelolaan limbah menggunakan teknologi pengenalan gambar dan pembelajaran mesin untuk mengklasifikasikan jenis limbah dari gambar pengguna. Aplikasi juga memberikan rekomendasi pengelolaan limbah, termasuk informasi lokasi tempat Bank Sampah terdekat. Tujuan aplikasi ini adalah meningkatkan kesadaran masyarakat tentang pengelolaan limbah yang benar dan mendukung praktik berkelanjutan.</string>
     <string name="abstract_title">Abstrak</string>
     <string name="login_txt">Masuk</string>
     <string name="hint_ed_email">Masukkan Email</string>
     <string name="hint_ed_password">Masukkan Password</string>
     <string name="hint_ed_conf_password">Konfirmasi Password</string>
     <string name="havent_account_txt">Belum punya akun?</string>
+    <string name="have_account_txt">Sudah punya akun?</string>
     <string name="regist_txt">Registrasi</string>
     <string name="hint_username_txt">Nama Pengguna</string>
-    <string name="maps_api_key">AIzaSyDysOTTKEx07UgIqa04yOkQ0dBxuiJwYMU</string>
+    <string name="maps_api_key">AIzaSyCK9UId1ZQ4bd4V0S1q79tV80vEWSdtqGU</string>
 </resources>

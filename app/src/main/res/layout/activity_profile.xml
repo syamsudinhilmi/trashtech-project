@@ -4,6 +4,7 @@
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
+	android:background="@color/white"
 	tools:context=".ui.activity.ProfileActivity">
 
 	<com.google.android.material.appbar.MaterialToolbar
@@ -64,6 +65,7 @@
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:text="Nama Pengguna"
+		android:textColor="@color/dark"
 		android:textSize="24sp"
 		android:textStyle="bold"
 		app:layout_constraintEnd_toEndOf="@+id/profile_image"
@@ -76,6 +78,7 @@
 		android:layout_height="wrap_content"
 		android:layout_marginTop="43dp"
 		android:text="Email"
+		android:textColor="@color/dark"
 		android:layout_marginStart="32dp"
 		android:textSize="18sp"
 		android:textStyle="bold"
@@ -88,6 +91,7 @@
 		android:layout_height="wrap_content"
 		android:layout_marginTop="5dp"
 		tools:text="namapengguna@gmail.com"
+		android:textColor="@color/dark"
 		android:layout_marginStart="32dp"
 		android:textSize="18sp"
 		app:layout_constraintStart_toStartOf="parent"
@@ -100,6 +104,7 @@
 		android:layout_height="wrap_content"
 		android:layout_marginTop="23dp"
 		android:text="Password"
+		android:textColor="@color/dark"
 		android:layout_marginStart="32dp"
 		android:textSize="18sp"
 		android:textStyle="bold"
@@ -112,6 +117,7 @@
 		android:layout_height="wrap_content"
 		android:layout_marginTop="5dp"
 		tools:text="123123123"
+		android:textColor="@color/dark"
 		android:layout_marginStart="32dp"
 		android:textSize="18sp"
 		app:layout_constraintStart_toStartOf="parent"
