@@ -37,7 +37,7 @@ private fun getImageUriForPreQ(context: Context): Uri {
     if (imageFile.parentFile?.exists() == false) imageFile.parentFile?.mkdir()
     return FileProvider.getUriForFile(
         context,
-        "com.playdeadrespawn.trashtech.fileprovider",
+        "${BuildConfig.APPLICATION_ID}.fileprovider",
         imageFile
     )
 }

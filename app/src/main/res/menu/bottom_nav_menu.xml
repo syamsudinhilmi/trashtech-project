@@ -4,12 +4,12 @@
         android:id="@+id/maps"
         android:title="Maps"
         android:enabled="true"
-        android:icon="@drawable/baseline_map_24"/>
+        android:icon="@drawable/ic_map"/>
 
     <item
         android:id="@+id/home"
         android:title="Home"
-        android:icon="@drawable/baseline_home_24"/>
+        android:icon="@drawable/ic_home"/>
 
     <item
         android:id="@+id/profile"

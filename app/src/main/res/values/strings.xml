@@ -3,9 +3,10 @@
     <string name="email_alert">email tidak valid</string>
     <string name="img_desc">default image</string>
     <string name="password_alert">password kurang dari 8 karakter</string>
-    <string name="tv_name">Nama</string>
+    <string name="tv_nama">Nama</string>
     <string name="tv_email">Email</string>
     <string name="tv_password">Password</string>
+    <string name="sign_up">Sign Up</string>
     <string name="title_activity_maps">MapsActivity</string>
     <string name="normal_type">Normal</string>
     <string name="satellite_type">Satellite</string>
@@ -20,4 +21,5 @@
     <string name="havent_account_txt">Belum punya akun?</string>
     <string name="regist_txt">Registrasi</string>
     <string name="hint_username_txt">Nama Pengguna</string>
+    <string name="maps_api_key">AIzaSyDysOTTKEx07UgIqa04yOkQ0dBxuiJwYMU</string>
 </resources>
