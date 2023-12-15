@@ -38,23 +38,20 @@ class ProfileActivity : AppCompatActivity() {
             docRef.get()
                 .addOnSuccessListener { document ->
                     if (document != null) {
-                        Log.d(TAG, "DocumentSnapshot data: ${document.data}")
                         binding.tvUsername.text = document.get("username").toString()
                         binding.tvRealEmail.text = document.get("email").toString()
                         binding.tvRealPassword.text = document.get("password").toString()
                     } else {
-                        Log.d(TAG, "No such document")
+                        Toast.makeText(this, "Kesalahan menampilkan data", Toast.LENGTH_SHORT).show()
                     }
                 }
                 .addOnFailureListener { exception ->
                     Log.d(TAG, "get failed with ", exception)
                 }
-
         }
 
 
         binding.menuDropdown.setOnClickListener { showDropdownMenu(it)  }
-
 
         binding.actionBack.setOnClickListener{
             startActivity(Intent(this, MainActivity::class.java))

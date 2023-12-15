@@ -11,4 +11,10 @@ interface ApiService {
         @Query("q") q: String,
         @Query("apiKey") apiKey: String
     ): Call<NewsResponse>
+
+    @GET("v2/everything")
+    fun detailNews(
+        @Query("q") q: String,
+        @Query("apiKey") apiKey: String
+    ): Call<NewsResponse>
 }

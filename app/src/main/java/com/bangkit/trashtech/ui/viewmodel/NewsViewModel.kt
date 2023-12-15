@@ -12,12 +12,29 @@ import retrofit2.Response
 
 class NewsViewModel : ViewModel() {
     val listNews = MutableLiveData<ArrayList<Article>>()
+    val detailNews = MutableLiveData<ArrayList<Article>>()
     fun setNews(query:String, apiKey:String){
         val client = ApiConfig.getApiService().getNews(query, apiKey)
         client.enqueue(object: Callback<NewsResponse> {
             override fun onResponse(call: Call<NewsResponse>, response: Response<NewsResponse>) {
                 if(response.isSuccessful){
                     listNews.postValue(response.body()?.articles)
+                }
+            }
+
+            override fun onFailure(call: Call<NewsResponse>, t: Throwable) {
+                Log.d("onFailure", t.message.toString())
+            }
+
+        })
+    }
+
+    fun setDetailNews(query:String, apiKey:String){
+        val client = ApiConfig.getApiService().detailNews(query, apiKey)
+        client.enqueue(object: Callback<NewsResponse> {
+            override fun onResponse(call: Call<NewsResponse>, response: Response<NewsResponse>) {
+                if(response.isSuccessful){
+                    detailNews.postValue(response.body()?.articles)
                 }
             }
 

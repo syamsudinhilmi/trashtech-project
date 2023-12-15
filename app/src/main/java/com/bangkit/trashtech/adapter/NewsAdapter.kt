@@ -1,11 +1,14 @@
 package com.bangkit.trashtech.adapter
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bangkit.trashtech.data.response.Article
 import com.bangkit.trashtech.databinding.ItemNewsBinding
+import com.bangkit.trashtech.ui.activity.DetailNewsActivity
 import com.bumptech.glide.Glide
 import java.text.SimpleDateFormat
 import java.util.Locale
@@ -58,5 +61,14 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
 
     override fun onBindViewHolder(holder: NewsViewHolder, position: Int) {
         holder.bind(list[position])
+
+        holder.itemView.setOnClickListener {
+            val title = list[position].title
+//            Toast.makeText(holder.itemView.context, "Title: $title", Toast.LENGTH_SHORT).show()
+
+            val detail = Intent(holder.itemView.context, DetailNewsActivity::class.java)
+            DetailNewsActivity.USERNAME = title
+            holder.itemView.context.startActivity(detail)
+        }
     }
 }
