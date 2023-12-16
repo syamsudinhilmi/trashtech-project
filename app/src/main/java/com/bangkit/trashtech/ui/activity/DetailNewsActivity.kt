@@ -1,14 +1,20 @@
 package com.bangkit.trashtech.ui.activity
 
+import android.content.Intent
 import android.graphics.drawable.ColorDrawable
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
+import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
 import com.bangkit.trashtech.R
+import com.bangkit.trashtech.data.database.News
+import com.bangkit.trashtech.data.response.Article
 import com.bangkit.trashtech.databinding.ActivityDetailNewsBinding
+import com.bangkit.trashtech.ui.viewmodel.BookmarkViewModel
 import com.bangkit.trashtech.ui.viewmodel.NewsViewModel
 import com.bumptech.glide.Glide
 import java.text.SimpleDateFormat
@@ -19,12 +25,22 @@ import java.util.TimeZone
 class DetailNewsActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDetailNewsBinding
     private lateinit var viewModel: NewsViewModel
+    private lateinit var bookmarkVM: BookmarkViewModel
+    private lateinit var link: String
+    private lateinit var title: String
+    private lateinit var  image: String
+    private lateinit var author: String
+    private lateinit var urlNews: String
+    private lateinit var source: String
+    private lateinit var publishedAt: String
+    private lateinit var content: String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDetailNewsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         viewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory())[NewsViewModel::class.java]
+        bookmarkVM = ViewModelProvider(this)[BookmarkViewModel::class.java]
 
         supportActionBar?.apply {
             setDisplayHomeAsUpEnabled(true)
@@ -32,21 +48,61 @@ class DetailNewsActivity : AppCompatActivity() {
             setBackgroundDrawable(ColorDrawable(ContextCompat.getColor(this@DetailNewsActivity, R.color.primary)))
         }
 
-        viewModel.setDetailNews(USERNAME, "4cc5bb3ac6fe4898ac97bddf67335362")
+        viewModel.setDetailNews(NEWSTITLE, "4cc5bb3ac6fe4898ac97bddf67335362")
+
         showLoading(true)
         viewModel.detailNews.observe(this){article ->
+
             showLoading(false)
-            binding.apply {
-                tvTitle.text = article[0].title
-                tvSource.text = article[0].source.name
-                Glide.with(this@DetailNewsActivity)
-                    .load(article[0].urlToImage)
-                    .into(ivNewsImg)
-                tvPublishedAt.text = formatDate(article[0].publishedAt)
-                tvDescription.text = article[0].content
+            article.forEach(){article ->
+                setData(article)
+                title = article.title
+                image = article.urlToImage
+                author = article.author
+                urlNews = article.url
+                source = article.source.name
+                publishedAt = article.publishedAt
+                content = article.content
+                link = article.url
+
             }
         }
 
+        binding.tvUrlSource.setOnClickListener{
+            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(link))
+            startActivity(browserIntent)
+        }
+
+//        binding.btnMark.setOnClickListener{
+//            insertNewsIntoDatabase(title)
+//        }
+
+
+        bookmarkVM.getNewsByTitle(NEWSTITLE).observe(this){ existingData ->
+            val data = existingData.isNotEmpty()
+            savedButton(data)
+
+            binding.btnMark.setOnClickListener(){
+                if (data){
+                    bookmarkVM.deleteNewsByTitle(title)
+                }else{
+                    val news = News(0, title, image, urlNews, source, author, publishedAt, content, true)
+                    bookmarkVM.addNews(news)
+                    Toast.makeText(this, "Berita disimpan", Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
+
+    }
+
+    private fun savedButton(data: Boolean) {
+        if(data){
+            binding.btnMark.setBackgroundColor(ContextCompat.getColor(this, R.color.dark_primary))
+            binding.btnMark.text = "Tersimpan"
+        }else{
+            binding.btnMark.setBackgroundColor(ContextCompat.getColor(this, R.color.primary))
+            binding.btnMark.text = "Simpan"
+        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -61,6 +117,7 @@ class DetailNewsActivity : AppCompatActivity() {
 
     private fun showLoading(state: Boolean) {
         binding.progressBar.visibility = if (state) View.VISIBLE else View.GONE
+        binding.btnMark.visibility = if (state) View.GONE else View.VISIBLE
     }
 
     private fun formatDate(dateString: String?): String {
@@ -78,7 +135,21 @@ class DetailNewsActivity : AppCompatActivity() {
         return ""
     }
 
+    private fun setData(article: Article){
+        binding.apply {
+
+            tvTitle.text = article.title
+            tvSource.text = article.source.name
+            Glide.with(this@DetailNewsActivity)
+                .load(article.urlToImage)
+                .into(ivNewsImg)
+            tvPublishedAt.text = formatDate(article.publishedAt)
+            tvDescription.text = article.content
+            tvUrlSource.text = "berita lengkap : " + article.url
+        }
+    }
+
     companion object{
-        var USERNAME = ""
+        var NEWSTITLE = ""
     }
 }

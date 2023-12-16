@@ -67,7 +67,7 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
 //            Toast.makeText(holder.itemView.context, "Title: $title", Toast.LENGTH_SHORT).show()
 
             val detail = Intent(holder.itemView.context, DetailNewsActivity::class.java)
-            DetailNewsActivity.USERNAME = title
+            DetailNewsActivity.NEWSTITLE = title
             holder.itemView.context.startActivity(detail)
         }
     }

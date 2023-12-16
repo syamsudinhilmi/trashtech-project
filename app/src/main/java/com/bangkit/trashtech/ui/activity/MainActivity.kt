@@ -56,6 +56,11 @@ class MainActivity : AppCompatActivity() {
                 val intent = Intent(this@MainActivity, IdentificationActivity::class.java)
                 startActivity(intent)
             }
+
+            btnSave.setOnClickListener{
+                val intent = Intent(this@MainActivity, BookmarkActivity::class.java)
+                startActivity(intent)
+            }
         }
 
     }

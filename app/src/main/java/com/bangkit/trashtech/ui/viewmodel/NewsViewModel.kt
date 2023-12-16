@@ -13,6 +13,7 @@ import retrofit2.Response
 class NewsViewModel : ViewModel() {
     val listNews = MutableLiveData<ArrayList<Article>>()
     val detailNews = MutableLiveData<ArrayList<Article>>()
+
     fun setNews(query:String, apiKey:String){
         val client = ApiConfig.getApiService().getNews(query, apiKey)
         client.enqueue(object: Callback<NewsResponse> {
@@ -34,7 +35,7 @@ class NewsViewModel : ViewModel() {
         client.enqueue(object: Callback<NewsResponse> {
             override fun onResponse(call: Call<NewsResponse>, response: Response<NewsResponse>) {
                 if(response.isSuccessful){
-                    detailNews.postValue(response.body()?.articles)
+                    detailNews.value = response.body()?.articles
                 }
             }
 
@@ -44,4 +45,6 @@ class NewsViewModel : ViewModel() {
 
         })
     }
+
+
 }
