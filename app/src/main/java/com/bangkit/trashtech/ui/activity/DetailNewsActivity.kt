@@ -12,6 +12,7 @@ import com.bangkit.trashtech.databinding.ActivityDetailNewsBinding
 import com.bangkit.trashtech.ui.viewmodel.NewsViewModel
 import com.bumptech.glide.Glide
 import java.text.SimpleDateFormat
+import java.util.Date
 import java.util.Locale
 import java.util.TimeZone
 
@@ -72,7 +73,7 @@ class DetailNewsActivity : AppCompatActivity() {
 
             // Format the date to the desired format
             val outputFormat = SimpleDateFormat("dd MMM yyyy, HH:mm", Locale.getDefault())
-            return outputFormat.format(date)
+            return outputFormat.format(date as Date)
         }
         return ""
     }

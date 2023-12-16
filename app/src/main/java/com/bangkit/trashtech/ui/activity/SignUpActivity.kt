@@ -1,14 +1,10 @@
 package com.bangkit.trashtech.ui.activity
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
-import android.widget.Button
 import android.widget.Toast
-import androidx.core.content.ContextCompat
-import com.bangkit.trashtech.R
+import androidx.appcompat.app.AppCompatActivity
 import com.bangkit.trashtech.databinding.ActivitySignUpBinding
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
@@ -33,6 +29,11 @@ class SignUpActivity : AppCompatActivity() {
 
         auth = Firebase.auth
         fStore = Firebase.firestore
+
+        binding.signin.setOnClickListener {
+            val intent = Intent(this, SigninActivity::class.java)
+            startActivity(intent)
+        }
 
         binding.btnSignUp.setOnClickListener {
             val name = binding.edRegisterName.text.toString()
@@ -100,10 +101,5 @@ class SignUpActivity : AppCompatActivity() {
         binding.edRegisterName.setText("")
         binding.edRegisterPass.setText("")
         binding.edConfRegisterPass.setText("")
-    }
-
-
-    companion object{
-        private val TAG = SignUpActivity::class.java.simpleName
     }
 }

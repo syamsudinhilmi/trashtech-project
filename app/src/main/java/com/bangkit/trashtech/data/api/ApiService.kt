@@ -17,4 +17,5 @@ interface ApiService {
         @Query("q") q: String,
         @Query("apiKey") apiKey: String
     ): Call<NewsResponse>
+
 }

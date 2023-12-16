@@ -30,9 +30,6 @@
             android:name=".ui.activity.AboutActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.activity.ResultActivity"
-            android:exported="false" />
-        <activity
             android:name=".ui.activity.ProfileActivity"
             android:exported="false" />
 
@@ -69,7 +66,8 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
         </provider> <!-- Trigger Google Play services to install the backported photo picker module. -->
-        <!-- suppress AndroidDomInspection -->
+
+        <!--suppress AndroidDomInspection -->
         <service
             android:name="com.google.android.gms.metadata.ModuleDependencies"
             android:enabled="false"

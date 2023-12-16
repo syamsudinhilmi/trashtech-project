@@ -1,9 +1,7 @@
 package com.bangkit.trashtech.ui.activity
 
-import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
@@ -11,6 +9,7 @@ import android.view.View
 import android.widget.PopupMenu
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import com.bangkit.trashtech.R
 import com.bangkit.trashtech.databinding.ActivityProfileBinding
 import com.bangkit.trashtech.ui.BottomNavigationUtils

@@ -4,13 +4,13 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bangkit.trashtech.data.response.Article
 import com.bangkit.trashtech.databinding.ItemNewsBinding
 import com.bangkit.trashtech.ui.activity.DetailNewsActivity
 import com.bumptech.glide.Glide
 import java.text.SimpleDateFormat
+import java.util.Date
 import java.util.Locale
 import java.util.TimeZone
 
@@ -30,7 +30,7 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
                     .load(article.urlToImage)
                     .into(ivArticleImage)
                 tvTitle.text = article.title
-                tvSource.text = article.source?.name
+                tvSource.text = article.source.name
                 tvPublishedAt.text = formatDate(article.publishedAt)
                 tvDescription.text = article.description
             }
@@ -47,7 +47,7 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
 
             // Format the date to the desired format
             val outputFormat = SimpleDateFormat("dd MMM yyyy, HH:mm", Locale.getDefault())
-            return outputFormat.format(date)
+            return outputFormat.format(date as Date)
         }
         return ""
     }

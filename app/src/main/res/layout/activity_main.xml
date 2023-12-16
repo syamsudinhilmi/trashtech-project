@@ -154,8 +154,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="300dp"
-        android:layout_marginBottom="81dp"
+        android:layout_marginTop="296dp"
+        android:layout_marginBottom="80dp"
         android:background="@drawable/bg_layout"
         app:layout_constraintBottom_toTopOf="@id/bottomNavView"
         app:layout_constraintEnd_toEndOf="parent"
@@ -210,8 +210,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_nav_menu" />
-
-    >
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

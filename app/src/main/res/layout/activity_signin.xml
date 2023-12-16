@@ -10,38 +10,42 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/bg_photo"
-        android:alpha="0.3"/>
+        android:alpha="0.3"
+        android:background="@drawable/bg_photo" />
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:src="@drawable/icon"
         android:padding="48dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        android:src="@drawable/icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <FrameLayout
-        android:layout_marginTop="200dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="200dp"
         android:background="@drawable/bg_layout">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="32dp"
-            android:layout_gravity="center_horizontal">
+            android:layout_gravity="center_horizontal"
+            android:padding="32dp">
+
             <TextView
                 android:id="@+id/signin_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/login_txt"
-                android:textColor="@color/dark"
                 android:textAlignment="center"
+                android:textColor="@color/dark"
                 android:textSize="32sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/emailEditTextLayout"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
@@ -54,18 +58,23 @@
                 app:boxCornerRadiusBottomStart="64dp"
                 app:boxCornerRadiusTopEnd="64dp"
                 app:boxCornerRadiusTopStart="64dp"
+                app:boxStrokeColor="@color/primary"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/signin_text"
-                app:startIconDrawable="@drawable/ic_mail">
+                app:startIconDrawable="@drawable/ic_mail"
+                app:startIconTint="@color/dark">
+
                 <com.bangkit.trashtech.ui.customview.EmailEditText
                     android:id="@+id/ed_register_email"
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
                     android:ems="10"
                     android:inputType="textEmailAddress"
+                    android:textColor="@color/dark"
                     tools:ignore="SpeakableTextPresentCheck" />
             </com.google.android.material.textfield.TextInputLayout>
+
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/passEditTextLayout"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -78,17 +87,22 @@
                 app:boxCornerRadiusBottomStart="64dp"
                 app:boxCornerRadiusTopEnd="64dp"
                 app:boxCornerRadiusTopStart="64dp"
+                app:boxStrokeColor="@color/primary"
                 app:endIconMode="password_toggle"
+                app:endIconTint="@color/dark"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/emailEditTextLayout"
-                app:startIconDrawable="@drawable/ic_lock">
+                app:startIconDrawable="@drawable/ic_lock"
+                app:startIconTint="@color/dark">
+
                 <com.bangkit.trashtech.ui.customview.PasswordEditText
                     android:id="@+id/ed_register_pass"
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
                     android:ems="10"
                     android:inputType="textPassword"
+                    android:textColor="@color/dark"
                     tools:ignore="SpeakableTextPresentCheck" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -101,25 +115,27 @@
                 android:backgroundTint="@color/primary"
                 android:text="@string/login_txt"
                 android:textColor="@color/white"
+                android:textStyle="bold"
                 app:layout_constraintTop_toBottomOf="@id/passEditTextLayout" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                android:gravity="center_horizontal"
                 app:layout_constraintBottom_toBottomOf="parent"
-                android:gravity="center_horizontal">
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
 
                 <TextView
                     android:id="@+id/singin_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
                     android:text="@string/havent_account_txt"
                     android:textColor="@color/dark"
                     android:textSize="16sp"
-                    android:layout_marginEnd="12dp"
                     android:textStyle="bold" />
+
                 <TextView
                     android:id="@+id/signup"
                     android:layout_width="wrap_content"
