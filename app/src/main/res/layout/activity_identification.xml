@@ -59,32 +59,53 @@
 
 
     <TextView
-        android:id="@+id/classified"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Siap siap ya!"
-        android:textColor="@color/dark"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/imageFrame"
-        app:layout_constraintStart_toStartOf="@+id/imageFrame"
-        app:layout_constraintTop_toBottomOf="@+id/imageFrame" />
-
-    <TextView
         android:id="@+id/tv_result"
         android:layout_width="324dp"
-        android:layout_height="108dp"
-        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
         android:foregroundGravity="top"
+        android:layout_marginTop="12dp"
         android:gravity="center_horizontal"
+        android:justificationMode="inter_word"
         android:textColor="@color/dark"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/classified"
+        app:layout_constraintTop_toBottomOf="@+id/imageFrame"
         tools:text="Gelas" />
+
+
+    <LinearLayout
+        android:layout_width="324dp"
+        android:layout_marginTop="12dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/tv_result"
+        app:layout_constraintStart_toStartOf="@+id/tv_result"
+        app:layout_constraintTop_toBottomOf="@+id/tv_result"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/tv_bank_sampah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:textColor="@color/dark"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="Atau cari bank sampah terdekat," />
+
+        <TextView
+            android:id="@+id/tv_disini"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/primary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text=" Disini" />
+
+
+    </LinearLayout>
+
 
 
     <com.google.android.material.button.MaterialButton

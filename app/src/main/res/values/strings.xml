@@ -22,5 +22,11 @@
     <string name="have_account_txt">Sudah punya akun?</string>
     <string name="regist_txt">Registrasi</string>
     <string name="hint_username_txt">Nama Pengguna</string>
-    <string name="maps_api_key">AIzaSyCK9UId1ZQ4bd4V0S1q79tV80vEWSdtqGU</string>
+    <string name="maps_api_key">AIzaSyDysOTTKEx07UgIqa04yOkQ0dBxuiJwYMU</string>
+    <string name="rec_0">Kertas daur ulang, Kotak penyimpanan, Bahan pembungkus, Pembatas atau pelindung dalam kotak pengiriman, lukisan, patung, mainan dan Hiasan dinding atau dekorasi rumah.</string>
+    <string name="rec_1">Botol, Wadah kaca daur ulang, Vas bunga, Lampu hias, Patung kaca, Paving block, Mozaik dan Lukisan kaca.</string>
+    <string name="rec_2">Memo, Kertas catatan, Kertas daur ulang, Kotak kardus, Kemasan kertas, Buku catatan, Kertas origami dan Karton.</string>
+    <string name="rec_3">Serat tekstil, Wadah penyimpanan, Panel dinding, Kursi, Meja, Mainan anak-anak, Hiasan dinding dan Patung.</string>
+    <string name="rec_4">Vas bunga, Toples, Patung kaca, Mangkuk, Gelas, Botol kaca daur ulang, Piring dan Cincin.</string>
+    <string name="rec_other">Tidak ada rekomendasi untuk jenis sampah ini.</string>
 </resources>

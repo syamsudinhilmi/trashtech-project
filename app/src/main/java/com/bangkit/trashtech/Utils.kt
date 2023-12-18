@@ -18,6 +18,7 @@ private val timeStamp: String = SimpleDateFormat(FILENAME_FORMAT, Locale.US).for
 class Constants {
     companion object {
         const val BASE_URL = "https://newsapi.org"
+        const val MAPS_URL = "https://maps.googleapis.com/"
     }
 }
 

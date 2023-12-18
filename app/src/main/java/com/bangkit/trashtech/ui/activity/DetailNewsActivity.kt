@@ -64,7 +64,6 @@ class DetailNewsActivity : AppCompatActivity() {
                 publishedAt = article.publishedAt
                 content = article.content
                 link = article.url
-
             }
         }
 
