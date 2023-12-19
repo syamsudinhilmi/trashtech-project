@@ -31,7 +31,7 @@ class BookmarkActivity : AppCompatActivity() {
 
         // recyclerview
         val adapter = BookmarkAdapter()
-        val recyclerView = binding.rvNews
+        val recyclerView = binding.rvBookmark
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(this)
 

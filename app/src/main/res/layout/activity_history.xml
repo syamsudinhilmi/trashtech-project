@@ -4,11 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    tools:context=".ui.activity.BookmarkActivity">
+    tools:context=".ui.activity.HistoryActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_bookmark"
+        android:id="@+id/rv_history"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -35,7 +34,7 @@
         android:id="@+id/tv_empty2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/empty_history_text"
+        android:text="@string/empty_news_text"
         android:textAlignment="center"
         android:textSize="24sp"
         android:visibility="gone"
@@ -43,5 +42,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_empty" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -61,6 +61,11 @@ class MainActivity : AppCompatActivity() {
                 val intent = Intent(this@MainActivity, BookmarkActivity::class.java)
                 startActivity(intent)
             }
+
+            btnHistory.setOnClickListener{
+                val intent = Intent(this@MainActivity, HistoryActivity::class.java)
+                startActivity(intent)
+            }
         }
 
     }
@@ -86,7 +91,7 @@ class MainActivity : AppCompatActivity() {
         val db = Firebase.firestore
 
         if (user != null) {
-            val docRef = db.collection("users").document(user.uid)
+            val docRef = db.collection("users").document(user.uid) //bug
             docRef.get()
                 .addOnSuccessListener { document ->
                     if (document != null) {

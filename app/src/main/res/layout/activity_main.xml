@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:alpha="0.3"
+        android:contentDescription="@string/img_desc"
         android:background="@drawable/bg_photo" />
 
     <TextView
@@ -21,7 +22,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
-        android:text="Siap menyelesaikan sampah anda?"
+        android:text="@string/main_title"
         android:textColor="@color/white"
         android:textSize="32sp"
         android:textStyle="bold"
@@ -72,7 +73,7 @@
             android:id="@+id/tv_identifikasi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Identifikasi"
+            android:text="@string/identification_text"
             android:textStyle="bold"
             android:textColor="@color/dark"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -97,7 +98,7 @@
             app:iconSize="32dp"
             app:iconTint="@color/dark"
             app:layout_constraintBottom_toTopOf="@+id/tv_save"
-            app:layout_constraintEnd_toStartOf="@+id/btn_more"
+            app:layout_constraintEnd_toStartOf="@+id/btn_history"
             app:layout_constraintStart_toEndOf="@+id/btn_Identifikasi"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -105,7 +106,7 @@
             android:id="@+id/tv_save"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tersimpan"
+            android:text="@string/save_text"
             android:textStyle="bold"
             android:textColor="@color/dark"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -115,7 +116,7 @@
 
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_more"
+            android:id="@+id/btn_history"
             android:layout_width="68dp"
             android:layout_height="68dp"
             android:backgroundTint="@color/white"
@@ -139,13 +140,13 @@
             android:id="@+id/tv_history"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Riwayat"
+            android:text="@string/history_text"
             android:textStyle="bold"
             android:textColor="@color/dark"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/btn_more"
-            app:layout_constraintStart_toStartOf="@+id/btn_more"
-            app:layout_constraintTop_toBottomOf="@+id/btn_more" />
+            app:layout_constraintEnd_toEndOf="@+id/btn_history"
+            app:layout_constraintStart_toStartOf="@+id/btn_history"
+            app:layout_constraintTop_toBottomOf="@+id/btn_history" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -178,7 +179,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="32dp"
             android:layout_marginTop="32dp"
-            android:text="Berita Untuk Anda"
+            android:text="@string/news_title_text"
             android:textColor="@color/dark"
             android:textSize="16sp"
             android:textStyle="bold"

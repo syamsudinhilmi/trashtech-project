@@ -5,15 +5,15 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [News::class], version = 1, exportSchema = false)
-abstract class NewsDatabase: RoomDatabase() {
-
+@Database(entities = [News::class, History::class], version = 1, exportSchema = false)
+abstract class AppDatabase: RoomDatabase() {
     abstract fun newsDao(): NewsDao
+    abstract fun historyDao(): HistoryDao
 
     companion object{
-        private var INSTANCE: NewsDatabase? = null
+        private var INSTANCE: AppDatabase? = null
 
-        fun getDatabase(context: Context): NewsDatabase{
+        fun getDatabase(context: Context): AppDatabase{
             val tempInstance = INSTANCE
             if(tempInstance != null){
                 return tempInstance
@@ -22,8 +22,8 @@ abstract class NewsDatabase: RoomDatabase() {
             synchronized(this){
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
-                    NewsDatabase::class.java,
-                    "news_database"
+                    AppDatabase::class.java,
+                    "trashTech_database"
                 ).build()
                 INSTANCE = instance
                 return instance
