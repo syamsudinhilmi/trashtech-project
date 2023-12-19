@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".ui.activity.AboutActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -16,6 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/abstract_title"
+            android:textColor="@color/dark"
             android:textAlignment="center"
             android:textSize="22sp"
             android:textStyle="bold"
@@ -31,7 +33,9 @@
             android:layout_marginHorizontal="6dp"
             android:layout_marginTop="18dp"
             android:lineSpacingExtra="6dp"
+            android:justificationMode="inter_word"
             android:text="@string/abstract_desc"
+            android:textColor="@color/dark"
             android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -61,6 +65,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/md_text"
+                android:textColor="@color/dark"
                 android:layout_gravity="center"
                 />
 
@@ -69,6 +74,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/hilmi_syamsudin"
+                android:textColor="@color/dark"
                 android:layout_gravity="center"
                 />
 
@@ -78,6 +84,7 @@
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
                 android:text="@string/universitas_negeri_semarang"
+                android:textColor="@color/dark"
                 android:layout_gravity="center"
                 />
 
@@ -106,6 +113,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/md_text"
+                android:textColor="@color/dark"
                 android:layout_gravity="center"
                 />
 
@@ -114,6 +122,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/muhamad_fazril_maulana"
+                android:textColor="@color/dark"
                 android:layout_gravity="center"
                 />
 
@@ -123,6 +132,7 @@
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
                 android:text="@string/polteknik_negeri_jakarta"
+                android:textColor="@color/dark"
                 android:layout_gravity="center"
                 />
 
@@ -152,6 +162,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/cc_text"
+                android:textColor="@color/dark"
                 android:layout_gravity="center"
                 />
 
@@ -160,6 +171,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/fakhir_mustafa_afdal"
+                android:textColor="@color/dark"
                 android:layout_gravity="center"
                 />
 
@@ -169,6 +181,7 @@
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
                 android:text="@string/institut_teknologi_telkom_purwokerto"
+                android:textColor="@color/dark"
                 android:layout_gravity="center"
                 />
 
@@ -198,6 +211,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/cc_text"
+                android:textColor="@color/dark"
                 android:layout_gravity="center"
                 />
 
@@ -206,6 +220,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/nathanael_andra_wijaya"
+                android:textColor="@color/dark"
                 android:layout_gravity="center"
                 />
 
@@ -215,6 +230,7 @@
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
                 android:text="@string/institut_teknologi_telkom_purwokerto"
+                android:textColor="@color/dark"
                 android:layout_gravity="center"
                 />
 
@@ -244,6 +260,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/ml_text"
+                android:textColor="@color/dark"
                 android:layout_gravity="center"
                 />
 
@@ -252,6 +269,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/chaesa_adella_rahma"
+                android:textColor="@color/dark"
                 android:layout_gravity="center"
                 />
 
@@ -261,6 +279,7 @@
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
                 android:text="@string/polteknik_negeri_jakarta"
+                android:textColor="@color/dark"
                 android:layout_gravity="center"
                 />
 
@@ -290,6 +309,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/ml_text"
+                android:textColor="@color/dark"
                 android:layout_gravity="center"
                 />
 
@@ -298,6 +318,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/nabila_salvaningtyas"
+                android:textColor="@color/dark"
                 android:layout_gravity="center"
                 />
 
@@ -307,6 +328,7 @@
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
                 android:text="@string/universitas_airlangga"
+                android:textColor="@color/dark"
                 android:layout_gravity="center"
                 />
 

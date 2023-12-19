@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/maps"
-        android:title="Maps"
+        android:title="Bank Sampah"
         android:enabled="true"
         android:icon="@drawable/ic_map"/>
 
@@ -13,6 +13,6 @@
 
     <item
         android:id="@+id/profile"
-        android:title="Profile"
+        android:title="Profil"
         android:icon="@drawable/ic_preview_profile"/>
 </menu>

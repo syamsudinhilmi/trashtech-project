@@ -23,6 +23,7 @@ class BookmarkActivity : AppCompatActivity() {
 
         supportActionBar?.apply {
             setDisplayHomeAsUpEnabled(true)
+            title = "Berita Tersimpan"
             setHomeAsUpIndicator(R.drawable.ic_backspace)
             setBackgroundDrawable(ColorDrawable(ContextCompat.getColor(this@BookmarkActivity, R.color.primary)))
         }

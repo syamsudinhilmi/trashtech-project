@@ -11,7 +11,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import com.bangkit.trashtech.Constants.Companion.MAPS_URL
 import com.bangkit.trashtech.R
 import com.bangkit.trashtech.data.api.ApiConfig.Companion.getMapsApiService
 import com.bangkit.trashtech.data.api.ApiService
@@ -64,7 +63,10 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         buildLocationRequest()
         buildLocationCallback()
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this)
+    }
 
+    override fun onResume() {
+        super.onResume()
         checkLocationPermission()
     }
 
@@ -106,7 +108,6 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
             })
     }
 
-
     private fun getUrl(latitude: Double, longitude: Double, typePlace: String): String {
         val googlePlaceUrl = StringBuilder("https://maps.googleapis.com/maps/api/place/nearbysearch/json?")
         googlePlaceUrl.append("location=$latitude,$longitude")
@@ -139,10 +140,12 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
             mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng))
             mMap.animateCamera(CameraUpdateFactory.zoomTo(11f))
+
+            // Request nearby places with the updated location
+            nearbyPlace("banksampah")
         }
     }
 
-    @Suppress("DEPRECATION")
     private fun buildLocationRequest() {
         locationRequest = LocationRequest().apply {
             priority = LocationRequest.PRIORITY_HIGH_ACCURACY
@@ -237,7 +240,6 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
         mMap.uiSettings.isZoomControlsEnabled = true
     }
-
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {

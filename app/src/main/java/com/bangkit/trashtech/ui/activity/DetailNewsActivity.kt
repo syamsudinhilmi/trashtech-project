@@ -39,7 +39,7 @@ class DetailNewsActivity : AppCompatActivity() {
         binding = ActivityDetailNewsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        viewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory())[NewsViewModel::class.java]
+        viewModel = ViewModelProvider(this)[NewsViewModel::class.java]
         bookmarkVM = ViewModelProvider(this)[BookmarkViewModel::class.java]
 
         supportActionBar?.apply {
@@ -51,47 +51,52 @@ class DetailNewsActivity : AppCompatActivity() {
         viewModel.setDetailNews(NEWSTITLE, "4cc5bb3ac6fe4898ac97bddf67335362")
 
         showLoading(true)
-        viewModel.detailNews.observe(this){article ->
-
+        viewModel.detailNews.observe(this) { articles ->
             showLoading(false)
-            article.forEach(){article ->
+            if (articles.isNotEmpty()) {
+                val article = articles[0]
                 setData(article)
                 title = article.title
-                image = article.urlToImage
-                author = article.author
+                image = article.urlToImage ?: ""
+                author = article.author ?: ""
                 urlNews = article.url
-                source = article.source.name
-                publishedAt = article.publishedAt
-                content = article.content
+                source = article.source?.name ?: ""
+                publishedAt = article.publishedAt ?: ""
+                content = article.content ?: ""
                 link = article.url
             }
         }
 
-        binding.tvUrlSource.setOnClickListener{
-            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(link))
-            startActivity(browserIntent)
-        }
 
-//        binding.btnMark.setOnClickListener{
-//            insertNewsIntoDatabase(title)
-//        }
-
-
-        bookmarkVM.getNewsByTitle(NEWSTITLE).observe(this){ existingData ->
-            val data = existingData.isNotEmpty()
-            savedButton(data)
-
-            binding.btnMark.setOnClickListener(){
-                if (data){
-                    bookmarkVM.deleteNewsByTitle(title)
-                }else{
-                    val news = News(0, title, image, urlNews, source, author, publishedAt, content, true)
-                    bookmarkVM.addNews(news)
-                    Toast.makeText(this, "Berita disimpan", Toast.LENGTH_SHORT).show()
-                }
+        binding.tvUrlSource.setOnClickListener {
+            if (::link.isInitialized && link.isNotBlank()) {
+                val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(link))
+                startActivity(browserIntent)
+            } else {
+                Toast.makeText(this, "Link is not available", Toast.LENGTH_SHORT).show()
             }
         }
 
+
+        bookmarkVM.getNewsByTitle(NEWSTITLE).observe(this) { existingData ->
+            val data = existingData.isNotEmpty()
+            savedButton(data)
+
+            binding.btnMark.setOnClickListener {
+                if (data) {
+                    bookmarkVM.deleteNewsByTitle(title)
+                } else {
+                    // Check if the title is not blank before saving the news
+                    if (title.isNotBlank()) {
+                        val news = News(0, title, image, urlNews, source, author, publishedAt, content, true)
+                        bookmarkVM.addNews(news)
+                        Toast.makeText(this, "Berita disimpan", Toast.LENGTH_SHORT).show()
+                    } else {
+                        Toast.makeText(this, "Judul tidak tersedia, berita tidak dapat disimpan", Toast.LENGTH_SHORT).show()
+                    }
+                }
+            }
+        }
     }
 
     private fun savedButton(data: Boolean) {
@@ -134,17 +139,16 @@ class DetailNewsActivity : AppCompatActivity() {
         return ""
     }
 
-    private fun setData(article: Article){
+    private fun setData(article: Article) {
         binding.apply {
-
             tvTitle.text = article.title
-            tvSource.text = article.source.name
+            tvSource.text = article.source?.name ?: ""
             Glide.with(this@DetailNewsActivity)
                 .load(article.urlToImage)
                 .into(ivNewsImg)
             tvPublishedAt.text = formatDate(article.publishedAt)
             tvDescription.text = article.content
-            tvUrlSource.text = "berita lengkap : " + article.url
+            tvUrlSource.text = "berita lengkap : ${article.url}"
         }
     }
 
