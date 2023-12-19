@@ -39,7 +39,7 @@ class ProfileActivity : AppCompatActivity() {
                     if (document != null) {
                         binding.tvUsername.text = document.get("username").toString()
                         binding.tvRealEmail.text = document.get("email").toString()
-                        binding.tvRealPassword.text = document.get("password").toString()
+//                        binding.tvRealPassword.text = document.get("password").toString()
                     } else {
                         Toast.makeText(this, "Kesalahan menampilkan data", Toast.LENGTH_SHORT).show()
                     }

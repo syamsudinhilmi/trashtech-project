@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bangkit.trashtech.R
 import com.bangkit.trashtech.data.database.History
 import com.bangkit.trashtech.databinding.ItemHistoryBinding
+
 import com.bumptech.glide.Glide
 
 class HistoryAdapter: RecyclerView.Adapter<HistoryAdapter.MyViewHolder>(){

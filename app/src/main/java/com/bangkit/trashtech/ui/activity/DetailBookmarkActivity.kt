@@ -40,9 +40,10 @@ class DetailBookmarkActivity : AppCompatActivity() {
                         .into(ivNewsImg)
                     tvPublishedAt.text = article.publishedAt
                     tvDescription.text = article.content
-                    tvUrlSource.text = "berita lengkap : " + article.urlNews
+//                    tvUrlSource.text = "berita lengkap : " + article.urlNews
+                    tvUrlSource.text = getString(R.string.full_news, article.urlNews)
                     btnMark.setBackgroundColor(ContextCompat.getColor(this@DetailBookmarkActivity, R.color.destroy))
-                    btnMark.text = "Hapus"
+                    btnMark.text = getString(R.string.delete_text)
 
                     btnMark.setOnClickListener{
                         bookmarkVM.deleteNewsByTitle(NEWSTITLE)

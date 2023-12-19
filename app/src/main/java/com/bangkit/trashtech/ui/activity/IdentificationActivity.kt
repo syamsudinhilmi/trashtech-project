@@ -63,7 +63,7 @@ class IdentificationActivity : AppCompatActivity() {
                 if (currentImageUri == null) {
                     Toast.makeText(
                         this@IdentificationActivity,
-                        "Pilih Gambar Dulu Ya!",
+                        getString(R.string.alert_image_selected),
                         Toast.LENGTH_SHORT
                     ).show()
                     return@setOnClickListener
@@ -143,10 +143,10 @@ class IdentificationActivity : AppCompatActivity() {
 
         // Display the result in tvResult
         binding.apply {
-            tvResult.text = "Yey hasilnya $predictedLabel"
-            tvRecommendation.text = "Yey hasilnya $recommendation"
-            tvBankSampah.text = "Atau cari bank sampah terdekat,"
-            tvDisini.text = " Disini"
+            tvResult.text = getString(R.string.predict_label_resource, predictedLabel)
+            tvRecommendation.text = recommendation
+            tvBankSampah.text = getString(R.string.text_trash_map)
+            tvDisini.text = getString(R.string.here_text)
             tvDisini.setOnClickListener {
                 startActivity(Intent(this@IdentificationActivity, MapsActivity::class.java))
             }

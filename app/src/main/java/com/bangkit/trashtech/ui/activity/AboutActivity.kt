@@ -2,7 +2,6 @@ package com.bangkit.trashtech.ui.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.bangkit.trashtech.R
 import com.bangkit.trashtech.databinding.ActivityAboutBinding
 import com.bumptech.glide.Glide
 

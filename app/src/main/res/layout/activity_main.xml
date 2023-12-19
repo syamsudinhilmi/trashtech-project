@@ -106,7 +106,7 @@
             android:id="@+id/tv_save"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/save_text"
+            android:text="@string/saving_text"
             android:textStyle="bold"
             android:textColor="@color/dark"
             app:layout_constraintBottom_toBottomOf="parent"

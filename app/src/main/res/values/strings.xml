@@ -33,7 +33,8 @@
     <string name="delete_txt">Delete</string>
     <string name="main_title">Siap menyelesaikan sampah anda?</string>
     <string name="identification_text">Identifikasi</string>
-    <string name="save_text">Tersimpan</string>
+    <string name="saving_text">Tersimpan</string>
+    <string name="save_text">Simpan</string>
     <string name="history_text">Riwayat</string>
     <string name="news_title_text">Berita Untuk Anda</string>
     <string name="identification_title">Mulai ambil gambar</string>
@@ -57,4 +58,16 @@
     <string name="chaesa_adella_rahma">Chaesa Adella Rahma</string>
     <string name="nabila_salvaningtyas">Nabila Salvaningtyas</string>
     <string name="universitas_airlangga">Universitas Airlangga</string>
+    <string name="full_news">berita lengkap : %1$s</string>
+    <string name="save_news">Berita disimpan</string>
+    <string name="delete_text">Hapus</string>
+    <string name="alert_title_delete">Hapus Riwayat</string>
+    <string name="alert_desc_delete">Yakin ingin menghapus semua riwayat identifikasi?</string>
+    <string name="yes_text">Yaa</string>
+    <string name="delete_success">Berhasil menghapus</string>
+    <string name="no_text">Tidak</string>
+    <string name="alert_image_selected">Pilih Gambar Dulu Ya!</string>
+    <string name="predict_label_resource">Yey hasilnya %1$s</string>
+    <string name="text_trash_map">Atau cari bank sampah terdekat,</string>
+    <string name="here_text">" Disini"</string>
 </resources>

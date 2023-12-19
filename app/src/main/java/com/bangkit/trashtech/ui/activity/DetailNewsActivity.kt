@@ -1,5 +1,6 @@
 package com.bangkit.trashtech.ui.activity
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.graphics.drawable.ColorDrawable
 import android.net.Uri
@@ -22,6 +23,7 @@ import java.util.Date
 import java.util.Locale
 import java.util.TimeZone
 
+@Suppress("NAME_SHADOWING")
 class DetailNewsActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDetailNewsBinding
     private lateinit var viewModel: NewsViewModel
@@ -45,7 +47,14 @@ class DetailNewsActivity : AppCompatActivity() {
         supportActionBar?.apply {
             setDisplayHomeAsUpEnabled(true)
             setHomeAsUpIndicator(R.drawable.ic_backspace)
-            setBackgroundDrawable(ColorDrawable(ContextCompat.getColor(this@DetailNewsActivity, R.color.primary)))
+            setBackgroundDrawable(
+                ColorDrawable(
+                    ContextCompat.getColor(
+                        this@DetailNewsActivity,
+                        R.color.primary
+                    )
+                )
+            )
         }
 
         viewModel.setDetailNews(NEWSTITLE, "4cc5bb3ac6fe4898ac97bddf67335362")
@@ -77,7 +86,6 @@ class DetailNewsActivity : AppCompatActivity() {
             }
         }
 
-
         bookmarkVM.getNewsByTitle(NEWSTITLE).observe(this) { existingData ->
             val data = existingData.isNotEmpty()
             savedButton(data)
@@ -88,24 +96,40 @@ class DetailNewsActivity : AppCompatActivity() {
                 } else {
                     // Check if the title is not blank before saving the news
                     if (title.isNotBlank()) {
-                        val news = News(0, title, image, urlNews, source, author, publishedAt, content, true)
+                        val news = News(
+                            0,
+                            title,
+                            image,
+                            urlNews,
+                            source,
+                            author,
+                            publishedAt,
+                            content,
+                            true
+                        )
                         bookmarkVM.addNews(news)
                         Toast.makeText(this, "Berita disimpan", Toast.LENGTH_SHORT).show()
                     } else {
-                        Toast.makeText(this, "Judul tidak tersedia, berita tidak dapat disimpan", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(
+                            this,
+                            "Judul tidak tersedia, berita tidak dapat disimpan",
+                            Toast.LENGTH_SHORT
+                        ).show()
                     }
                 }
             }
         }
     }
 
+
+    @SuppressLint("SetTextI18n")
     private fun savedButton(data: Boolean) {
         if(data){
             binding.btnMark.setBackgroundColor(ContextCompat.getColor(this, R.color.dark_primary))
-            binding.btnMark.text = "Tersimpan"
+            binding.btnMark.text = getString(R.string.saving_text)
         }else{
             binding.btnMark.setBackgroundColor(ContextCompat.getColor(this, R.color.primary))
-            binding.btnMark.text = "Simpan"
+            binding.btnMark.text = getString(R.string.save_text)
         }
     }
 
@@ -148,7 +172,7 @@ class DetailNewsActivity : AppCompatActivity() {
                 .into(ivNewsImg)
             tvPublishedAt.text = formatDate(article.publishedAt)
             tvDescription.text = article.content
-            tvUrlSource.text = "berita lengkap : ${article.url}"
+            tvUrlSource.text = getString(R.string.full_news, article.url)
         }
     }
 

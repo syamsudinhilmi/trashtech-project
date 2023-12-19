@@ -103,7 +103,7 @@
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_marginTop="23dp"
-		android:text="Password"
+		tools:text="Password"
 		android:textColor="@color/dark"
 		android:layout_marginStart="32dp"
 		android:textSize="18sp"

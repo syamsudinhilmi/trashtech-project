@@ -1,13 +1,13 @@
 package com.bangkit.trashtech.ui.activity
 
 import android.graphics.drawable.ColorDrawable
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -72,14 +72,14 @@ class HistoryActivity : AppCompatActivity() {
 
     private fun deleteHistory() {
         val alertDialogBuilder = AlertDialog.Builder(this)
-        alertDialogBuilder.setTitle("Hapus Riwayat")
-        alertDialogBuilder.setMessage("Yakin ingin menghapus semua riwayat identifikasi?")
-        alertDialogBuilder.setPositiveButton("Yaa") { _, _ ->
+        alertDialogBuilder.setTitle(getString(R.string.alert_title_delete))
+        alertDialogBuilder.setMessage(getString(R.string.alert_desc_delete))
+        alertDialogBuilder.setPositiveButton(getString(R.string.yes_text)) { _, _ ->
             historyViewModel.deleteAll()
-            Toast.makeText(this, "Berhasil menghapus", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.delete_success), Toast.LENGTH_SHORT).show()
         }
 
-        alertDialogBuilder.setNegativeButton("Tidak") { _, _ ->
+        alertDialogBuilder.setNegativeButton(getString(R.string.no_text)) { _, _ ->
             finish()
         }
         val alertDialog: AlertDialog = alertDialogBuilder.create()

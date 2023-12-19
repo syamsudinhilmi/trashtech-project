@@ -16,12 +16,12 @@
             android:id="@+id/tv_abstract_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:text="@string/abstract_title"
             android:textColor="@color/dark"
             android:textAlignment="center"
             android:textSize="22sp"
             android:textStyle="bold"
-            android:layout_marginTop="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -46,47 +46,46 @@
             android:id="@+id/profile1"
             android:layout_width="190dp"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_abstract"
-            app:layout_constraintEnd_toStartOf="@id/profile2"
             android:layout_marginTop="10dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@id/profile2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_abstract">
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/profile_image1"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/ic_preview_profile"
                 android:layout_gravity="center"
-                android:layout_marginTop="20dp"/>
+                android:layout_marginTop="20dp"
+                app:civ_border_color="@color/primary"
+                app:civ_border_width="3dp" />
 
             <TextView
                 android:id="@+id/role1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/md_text"
                 android:textColor="@color/dark"
                 android:layout_gravity="center"
-                />
+                android:text="@string/md_text"
+                android:textStyle="italic" />
 
             <TextView
                 android:id="@+id/name1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/hilmi_syamsudin"
                 android:textColor="@color/dark"
                 android:layout_gravity="center"
-                />
+                android:text="@string/hilmi_syamsudin" />
 
             <TextView
                 android:id="@+id/univ1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:text="@string/universitas_negeri_semarang"
                 android:textColor="@color/dark"
                 android:layout_gravity="center"
-                />
+                android:text="@string/universitas_negeri_semarang"
+                android:textAlignment="center" />
 
         </LinearLayout>
 
@@ -94,47 +93,46 @@
             android:id="@+id/profile2"
             android:layout_width="190dp"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toEndOf="@id/profile1"
-            app:layout_constraintTop_toBottomOf="@id/tv_abstract"
-            app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="10dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/profile1"
+            app:layout_constraintTop_toBottomOf="@id/tv_abstract">
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/profile_image2"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/ic_preview_profile"
                 android:layout_gravity="center"
-                android:layout_marginTop="20dp"/>
+                android:layout_marginTop="20dp"
+                app:civ_border_color="@color/primary"
+                app:civ_border_width="3dp" />
 
             <TextView
                 android:id="@+id/role2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/md_text"
                 android:textColor="@color/dark"
                 android:layout_gravity="center"
-                />
+                android:text="@string/md_text"
+                android:textStyle="italic" />
 
             <TextView
                 android:id="@+id/name2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/muhamad_fazril_maulana"
                 android:textColor="@color/dark"
                 android:layout_gravity="center"
-                />
+                android:text="@string/muhamad_fazril_maulana" />
 
             <TextView
                 android:id="@+id/univ2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:text="@string/polteknik_negeri_jakarta"
                 android:textColor="@color/dark"
                 android:layout_gravity="center"
-                />
+                android:text="@string/polteknik_negeri_jakarta"
+                android:textAlignment="center" />
 
         </LinearLayout>
 
@@ -142,48 +140,48 @@
             android:id="@+id/profile3"
             android:layout_width="190dp"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/profile1"
-            app:layout_constraintEnd_toStartOf="@id/profile2"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="8dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@id/profile2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profile1">
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/profile_image3"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/ic_preview_profile"
                 android:layout_gravity="center"
-                android:layout_marginTop="20dp"/>
+                android:layout_marginTop="20dp"
+                app:civ_border_color="@color/primary"
+                app:civ_border_width="3dp" />
 
             <TextView
                 android:id="@+id/role3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/cc_text"
                 android:textColor="@color/dark"
                 android:layout_gravity="center"
-                />
+                android:text="@string/cc_text"
+
+                android:textStyle="italic" />
 
             <TextView
                 android:id="@+id/name3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/fakhir_mustafa_afdal"
                 android:textColor="@color/dark"
                 android:layout_gravity="center"
-                />
+                android:text="@string/fakhir_mustafa_afdal" />
 
             <TextView
                 android:id="@+id/univ3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAlignment="center"
                 android:text="@string/institut_teknologi_telkom_purwokerto"
+                android:textAlignment="center"
                 android:textColor="@color/dark"
-                android:layout_gravity="center"
-                />
+                android:layout_gravity="center" />
 
         </LinearLayout>
 
@@ -191,48 +189,47 @@
             android:id="@+id/profile4"
             android:layout_width="190dp"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toEndOf="@id/profile1"
-            app:layout_constraintTop_toBottomOf="@id/profile2"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="10dp"
             android:layout_marginStart="8dp"
-            android:orientation="vertical">
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/profile1"
+            app:layout_constraintTop_toBottomOf="@id/profile2">
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/profile_image4"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/ic_preview_profile"
                 android:layout_gravity="center"
-                android:layout_marginTop="20dp"/>
+                android:layout_marginTop="20dp"
+                app:civ_border_color="@color/primary"
+                app:civ_border_width="3dp" />
 
             <TextView
                 android:id="@+id/role4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/cc_text"
                 android:textColor="@color/dark"
                 android:layout_gravity="center"
-                />
+                android:text="@string/cc_text"
+                android:textStyle="italic" />
 
             <TextView
                 android:id="@+id/name4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/nathanael_andra_wijaya"
                 android:textColor="@color/dark"
                 android:layout_gravity="center"
-                />
+                android:text="@string/nathanael_andra_wijaya" />
 
             <TextView
                 android:id="@+id/univ4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAlignment="center"
                 android:text="@string/institut_teknologi_telkom_purwokerto"
+                android:textAlignment="center"
                 android:textColor="@color/dark"
-                android:layout_gravity="center"
-                />
+                android:layout_gravity="center" />
 
         </LinearLayout>
 
@@ -240,48 +237,47 @@
             android:id="@+id/profile5"
             android:layout_width="190dp"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/profile3"
-            app:layout_constraintEnd_toStartOf="@id/profile2"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="8dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@id/profile2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profile3">
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/profile_image5"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/ic_preview_profile"
                 android:layout_gravity="center"
-                android:layout_marginTop="20dp"/>
+                android:layout_marginTop="20dp"
+                app:civ_border_color="@color/primary"
+                app:civ_border_width="3dp" />
 
             <TextView
                 android:id="@+id/role5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/ml_text"
                 android:textColor="@color/dark"
                 android:layout_gravity="center"
-                />
+                android:text="@string/ml_text"
+                android:textStyle="italic" />
 
             <TextView
                 android:id="@+id/name5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/chaesa_adella_rahma"
                 android:textColor="@color/dark"
                 android:layout_gravity="center"
-                />
+                android:text="@string/chaesa_adella_rahma" />
 
             <TextView
                 android:id="@+id/univ5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:text="@string/polteknik_negeri_jakarta"
                 android:textColor="@color/dark"
                 android:layout_gravity="center"
-                />
+                android:text="@string/polteknik_negeri_jakarta"
+                android:textAlignment="center" />
 
         </LinearLayout>
 
@@ -289,48 +285,47 @@
             android:id="@+id/profile6"
             android:layout_width="190dp"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toEndOf="@id/profile1"
-            app:layout_constraintTop_toBottomOf="@id/profile3"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="10dp"
             android:layout_marginStart="8dp"
-            android:orientation="vertical">
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/profile1"
+            app:layout_constraintTop_toBottomOf="@id/profile3">
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/profile_image6"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/ic_preview_profile"
                 android:layout_gravity="center"
-                android:layout_marginTop="20dp"/>
+                android:layout_marginTop="20dp"
+                app:civ_border_color="@color/primary"
+                app:civ_border_width="3dp" />
 
             <TextView
                 android:id="@+id/role6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/ml_text"
                 android:textColor="@color/dark"
                 android:layout_gravity="center"
-                />
+                android:text="@string/ml_text"
+                android:textStyle="italic" />
 
             <TextView
                 android:id="@+id/name6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/nabila_salvaningtyas"
                 android:textColor="@color/dark"
                 android:layout_gravity="center"
-                />
+                android:text="@string/nabila_salvaningtyas" />
 
             <TextView
                 android:id="@+id/univ6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAlignment="center"
                 android:text="@string/universitas_airlangga"
+                android:textAlignment="center"
                 android:textColor="@color/dark"
-                android:layout_gravity="center"
-                />
+                android:layout_gravity="center" />
 
         </LinearLayout>
 
