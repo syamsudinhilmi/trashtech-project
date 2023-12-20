@@ -7,7 +7,7 @@ We are from CH2-PS163 Group, Bangkit Academy 2023 Capstone Team
 6. (MD) A128BSY2218 – Muhamad Fazril Maulana – Politeknik Negeri Jakarta - [Active]
 7. (MD) A283BSY2571 – Hilmi Syamsudin – Universitas Negeri Semarang - [Active]
 
-##SCREENSHOT
+#SCREENSHOT
 
 ![Screenshot_2023-12-20-21-05-53-246_com bangkit trashtech](https://github.com/syamsudinhilmi/trashtech-project/assets/89371869/d3317b8d-cea7-45dc-8e53-02ca9e87f9df)
 ![Screenshot_2023-12-20-21-06-52-310_com bangkit trashtech](https://github.com/syamsudinhilmi/trashtech-project/assets/89371869/829085fa-f244-464d-983c-3398f138043b)
