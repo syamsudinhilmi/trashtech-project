@@ -6,3 +6,7 @@ We are from CH2-PS163 Group, Bangkit Academy 2023 Capstone Team
 5. (CC) C120BSY4263 – Nathanael Andra Wijaya – Institut Teknologi Telkom Purwokerto - [Active]
 6. (MD) A128BSY2218 – Muhamad Fazril Maulana – Politeknik Negeri Jakarta - [Active]
 7. (MD) A283BSY2571 – Hilmi Syamsudin – Universitas Negeri Semarang - [Active]
+
+
+![Screenshot_2023-12-20-21-04-47-920_com bangkit trashtech](https://github.com/syamsudinhilmi/trashtech-project/assets/89371869/a2095607-7c2e-447e-868b-f1a7892bf1d0)
+
