@@ -16,22 +16,22 @@ class AboutActivity : AppCompatActivity() {
 
         binding.apply {
             Glide.with(this@AboutActivity)
-                .load("https://raw.githubusercontent.com/syamsudinhilmi/trashtech-capstone-team/main/capstone%20foto/Hilmi_.jpg?token=GHSAT0AAAAAACLCZYH3PMV4QHOA6CL5BU6KZMBSAKQ")
+                .load("https://raw.githubusercontent.com/syamsudinhilmi/trashtech-project/master/CH2-PS163%20Member/Hilmi.jpg")
                 .into(profileImage1)
             Glide.with(this@AboutActivity)
-                .load("https://raw.githubusercontent.com/syamsudinhilmi/trashtech-capstone-team/main/capstone%20foto/gatau%20siapa.jpg?token=GHSAT0AAAAAACLCZYH3ZBD73D6PI3QC3DXSZMBSCKA")
+                .load("https://raw.githubusercontent.com/syamsudinhilmi/trashtech-project/master/CH2-PS163%20Member/Fazril.jpg")
                 .into(profileImage2)
             Glide.with(this@AboutActivity)
-                .load("https://raw.githubusercontent.com/syamsudinhilmi/trashtech-capstone-team/main/capstone%20foto/Fakhir.jpg?token=GHSAT0AAAAAACLCZYH3QYCXAVN4ESAHINUCZMBSDOA")
+                .load("https://raw.githubusercontent.com/syamsudinhilmi/trashtech-project/master/CH2-PS163%20Member/Fakhir.jpg")
                 .into(profileImage3)
             Glide.with(this@AboutActivity)
-                .load("https://raw.githubusercontent.com/syamsudinhilmi/trashtech-capstone-team/main/capstone%20foto/Nathan.jpg?token=GHSAT0AAAAAACLCZYH3UT5YPHIKO6KYCEAWZMBSD4A")
+                .load("https://raw.githubusercontent.com/syamsudinhilmi/trashtech-project/master/CH2-PS163%20Member/Nathan.jpg")
                 .into(profileImage4)
             Glide.with(this@AboutActivity)
-                .load("https://raw.githubusercontent.com/syamsudinhilmi/trashtech-capstone-team/main/capstone%20foto/Cesa.jpg?token=GHSAT0AAAAAACLCZYH2RAYTTBXNOPOHXIGAZMBSEMQ")
+                .load("https://raw.githubusercontent.com/syamsudinhilmi/trashtech-project/master/CH2-PS163%20Member/Cesa.jpg")
                 .into(profileImage5)
             Glide.with(this@AboutActivity)
-                .load("https://raw.githubusercontent.com/syamsudinhilmi/trashtech-capstone-team/main/capstone%20foto/nnnn.JPG?token=GHSAT0AAAAAACLCZYH32P5CBZVFUGFY3SPUZMBSEWQ")
+                .load("https://raw.githubusercontent.com/syamsudinhilmi/trashtech-project/master/CH2-PS163%20Member/Nabila.JPG")
                 .into(profileImage6)
         }
     }
