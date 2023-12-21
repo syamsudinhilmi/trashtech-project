@@ -1,7 +1,11 @@
 <h1 align="center">
 <img align="center" width="400" src="CH2-PS163 Member/Logo/logo.png">
-
 </h1>
+
+<h2 align="center">
+  Trash Tech
+</h2>
+
 <h2 align="center">
   Repository Capstone Project Bangkit Academy 2023 Team CH2-PS163
 </h2>
