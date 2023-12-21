@@ -45,7 +45,8 @@ https://drive.google.com/drive/folders/1qixe-vhFxRZFcsnDXLx3AZOWTI6CYgoq?usp=sha
 4. For model testing, use waste images for identification.
 
 ## Contributors
-Nabila Salvaningtyas @Sistina02
+Nabila Salvaningtyas @sistina02
+
 Chaesa Adella Rahma @chaesadella
 
 ---
