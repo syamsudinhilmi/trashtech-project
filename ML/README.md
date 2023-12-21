@@ -47,7 +47,7 @@ https://drive.google.com/drive/folders/1qixe-vhFxRZFcsnDXLx3AZOWTI6CYgoq?usp=sha
 ## Contributors
 Nabila Salvaningtyas @sistina02
 
-Chaesa Adella Rahma @chaesadella
+Chaesa Adella Rahma @https://github.com/chaesadella
 
 ---
 
