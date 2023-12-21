@@ -27,6 +27,7 @@ Eco-Friendly Companion for Smarter Waste Management.
 * [Glide](https://github.com/bumptech/glide)
 * [Retrofit](https://square.github.io/retrofit/)
 * [Firestore](https://firebase.google.com/docs/firestore)
+* [CircleImageView](https://github.com/hdodenhof/CircleImageView)
 
 ## Features
 
