@@ -2,6 +2,9 @@
 
 This project encompasses a waste classification system using Convolutional Neural Network (CNN) to identify types of waste based on provided images. Additionally, the project includes a recycling recommendation system based on the waste classification results.
 
+**DATASET**
+https://drive.google.com/drive/folders/1qixe-vhFxRZFcsnDXLx3AZOWTI6CYgoq?usp=drive_link
+
 ## Process Workflow
 
 1. **Data Preprocessing:**
