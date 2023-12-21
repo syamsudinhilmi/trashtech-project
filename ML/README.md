@@ -44,6 +44,11 @@ https://drive.google.com/drive/folders/1qixe-vhFxRZFcsnDXLx3AZOWTI6CYgoq?usp=sha
 3. Perform model training by running the provided code.
 4. For model testing, use waste images for identification.
 
+## Contributors
+Nabila Salvaningtyas @sistina02
+
+Chaesa Adella Rahma @https://github.com/chaesadella
+
 ---
 
 Feel free to adapt the explanation according to the information and steps relevant to your project's structure and objectives.
