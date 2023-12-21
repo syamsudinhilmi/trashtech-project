@@ -6,20 +6,27 @@ Eco-Friendly Companion for Smarter Waste Management.
 
 ### 1. Dashboard
 
-Waste News, display latest news regarding waste issues. This information is obtained from [News API](https://newsapi.org/).
+* Waste News, display latest news regarding waste issues. This information is obtained from [News API](https://newsapi.org/).
 
 ### 2. Trash Identification
 
-Trash image identification using TFLite model, with 6 class including Carton Packaging, Glass, Paper, Plastic Bottles, Tin Bottles.
+* Trash image identification using TFLite model, with 6 class including Carton Packaging, Glass, Paper, Plastic Bottles, Tin Bottles.
 
 ### 3. Authentication
 
-Login and register using Firebase and realtime database developed by CC team
+* Login and register using [Firebase](https://firebase.google.com/) and realtime database developed by CC team
 
 ### 4. Maps
 
-Show nearest waste bank location from user. Using Google Maps API and Places API library.
+* Show nearest waste bank location from user. Using [Google Maps API](https://developers.google.com/maps) and [Places API](https://developers.google.com/maps/documentation/places/web-service/overview) library.
 
+
+## Another Library
+
+* [TensorFlow Lite](https://www.tensorflow.org/lite/guide)
+* [Glide](https://github.com/bumptech/glide)
+* [Retrofit](https://square.github.io/retrofit/)
+* [Firestore](https://firebase.google.com/docs/firestore)
 
 ## Features
 
@@ -35,7 +42,7 @@ Show nearest waste bank location from user. Using Google Maps API and Places API
 
 * Clone the repository, or download the app release [here](https://github.com/syamsudinhilmi/trashtech-project/releases/download/v0.0.1/trash-tech-v0.0.1.apk)
 
-# Contributors
+## Contributors
 
 * Hilmi Syamsudin [@syamsudinhilmi](https://github.com/syamsudinhilmi)
 * Muhamad Fazril Maulana [@MhmdFazril](https://github.com/MhmdFazril)
