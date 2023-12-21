@@ -4,13 +4,20 @@ Eco-Friendly Companion for Smarter Waste Management.
 
 ## Documentation
 
-**1. Dashboard**
+### 1. Dashboard
+
 Waste News, display latest news regarding waste issues. This information is obtained from [News API](https://newsapi.org/).
-**2. Trash Identification**
+
+### 2. Trash Identification
+
 Trash image identification using TFLite model, with 6 class including Carton Packaging, Glass, Paper, Plastic Bottles, Tin Bottles.
-**3. Authentication**
+
+### 3. Authentication
+
 Login and register using Firebase and realtime database developed by CC team
-**4. Maps**
+
+### 4. Maps
+
 Show nearest waste bank location from user. Using Google Maps API and Places API library.
 
 
@@ -26,8 +33,7 @@ Show nearest waste bank location from user. Using Google Maps API and Places API
 
 ## How to Use
 
-* Clone the repository, or download the app release below
-https://github.com/syamsudinhilmi/trashtech-project/releases/download/v0.0.1/trash-tech-v0.0.1.apk
+* Clone the repository, or download the app release [here](https://github.com/syamsudinhilmi/trashtech-project/releases/download/v0.0.1/trash-tech-v0.0.1.apk)
 
 # Contributors
 
