@@ -1,5 +1,5 @@
 <h1 align="center">
-<img align="center" width="400" src="CH2-PS163 Member/Logo/logo.png">
+<img align="center" width="200" src="CH2-PS163 Member/Logo/logo.png">
 </h1>
 
 <h2 align="center">
