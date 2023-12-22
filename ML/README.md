@@ -38,6 +38,7 @@ https://drive.google.com/drive/folders/1qixe-vhFxRZFcsnDXLx3AZOWTI6CYgoq?usp=sha
 9. **Model Conversion to TFLite:**
    - The trained and saved model is converted to the TFLite format for portability purposes.
 
+[!TIP]
 ## How to Use
 1. Download or clone this repository.
 2. Ensure all necessary libraries and dependencies are installed.
@@ -47,7 +48,7 @@ https://drive.google.com/drive/folders/1qixe-vhFxRZFcsnDXLx3AZOWTI6CYgoq?usp=sha
 ## Contributors
 Nabila Salvaningtyas @sistina02
 
-Chaesa Adella Rahma @https://github.com/chaesadella
+Chaesa Adella Rahma @chaesadella
 
 ---
 
