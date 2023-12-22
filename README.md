@@ -24,12 +24,13 @@ Trash Tech Project aim to sort and classify different types of waste and provide
 
 ### Our Member
 
-|           Name           | Bangkit ID  |        Role        |              University               |
-| :----------------------: | :---------: | :----------------: | :-----------------------------------: |
-|  Muhamad Fazril Maulana  | A128BSY2218 | Mobile Development |        Politeknik Negeri Jakarta      |
-|      Hilmi Syamsudin     | A283BSY2571 | Mobile Development |       Universitas Negeri Semarang     |
-|    Chaesa Adella Rahma   | M128BSX0322 |  Machine Learning  |        Politeknik Negeri Jakarta      |
-|   Nabila Salvaningtyas   | M180BSX1073 |  Machine Learning  |          Universitas Airlangga        |
-|   Fakhir Mustafa Afdal   | C120BSY3214 |  Cloud Computing   |  Institut Teknologi Telkom Purwokerto |
-|  Nathanael Andra Wijaya  | C120BSY4263 |  Cloud Computing   |  Institut Teknologi Telkom Purwokerto |
+|             Name           | Bangkit ID  |        Role        |              University               |   Status  | 
+| :------------------------: | :---------: | :----------------: | :-----------------------------------: |:---------:|
+|    Muhamad Fazril Maulana  | A128BSY2218 | Mobile Development |        Politeknik Negeri Jakarta      |   Active  |
+|        Hilmi Syamsudin     | A283BSY2571 | Mobile Development |       Universitas Negeri Semarang     |   Active  |
+|      Chaesa Adella Rahma   | M128BSX0322 |  Machine Learning  |        Politeknik Negeri Jakarta      |   Active  |
+|     Nabila Salvaningtyas   | M180BSX1073 |  Machine Learning  |          Universitas Airlangga        |   Active  |
+|  Calvin Yohanes Napitupulu | M006BSY1151 |  Machine Learning  |          Universitas Brawijaya        |  Inactive |
+|     Fakhir Mustafa Afdal   | C120BSY3214 |  Cloud Computing   |  Institut Teknologi Telkom Purwokerto |   Active  |
+|    Nathanael Andra Wijaya  | C120BSY4263 |  Cloud Computing   |  Institut Teknologi Telkom Purwokerto |   Active  |
 
